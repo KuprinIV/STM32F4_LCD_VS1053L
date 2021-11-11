@@ -1,0 +1,21 @@
+
+{
+  "Application": {
+    "Name": "STM32F4_LCD",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "AvailableColorDepths": [ 24 ],
+    "AvailableLCDs":
+    {
+      "24": "LCD24bpp"
+    },
+    "AvailableResolutions" : [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PostGenerateTargetCommand" : "touchgfx update_project --project-file=../STM32F4_LCD.ioc --platform=m4",
+    "Family" : "STM32F4"
+  },
+  "Version": "4.15.0"
+}
