@@ -44,6 +44,8 @@ RM := rm -rf
 -include Middlewares/Third_Party/FreeRTOS/Source/subdir.mk
 -include Middlewares/Third_Party/FatFs/src/option/subdir.mk
 -include Middlewares/Third_Party/FatFs/src/subdir.mk
+-include Middlewares/ST/STM32_USB_Device_Library/Core/Src/subdir.mk
+-include Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
 -include subdir.mk
 -include objects.mk
@@ -110,8 +112,8 @@ all:
 main-build: STM32F4_LCD.elf secondary-outputs
 
 # Tool invocations
-STM32F4_LCD.elf: $(OBJS) $(USER_OBJS) C:\Users\Ilya\Documents\Firmware\ Projects\STM32CudeIDE\STM32F4_LCD\STM32F429IGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "STM32F4_LCD.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Ilya\Documents\Firmware Projects\STM32CudeIDE\STM32F4_LCD\STM32F429IGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F4_LCD.map" -Wl,--gc-sections -static -L"C:\Users\Ilya\Documents\Firmware Projects\STM32CudeIDE\STM32F4_LCD\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+STM32F4_LCD.elf: $(OBJS) $(USER_OBJS) C:\Users\Ilya\Documents\Projects\Firmware\ Projects\STM32CudeIDE\STM32F4_LCD\STM32F429IGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "STM32F4_LCD.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Ilya\Documents\Projects\Firmware Projects\STM32CudeIDE\STM32F4_LCD\STM32F429IGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F4_LCD.map" -Wl,--gc-sections -static -L"C:\Users\Ilya\Documents\Projects\Firmware Projects\STM32CudeIDE\STM32F4_LCD\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
