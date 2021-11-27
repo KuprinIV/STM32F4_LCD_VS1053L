@@ -32,7 +32,7 @@
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-uint8_t current_volume = 60;
+uint8_t current_volume = 5;
 extern uint8_t WAV_header_48kHz_16bit_stereo[44];
 /* USER CODE END PV */
 
@@ -157,7 +157,7 @@ static int8_t AUDIO_Init_FS(uint32_t AudioFreq, uint32_t Volume, uint32_t option
   /* USER CODE BEGIN 0 */
 	UNUSED(options);
 	writeCommandRegister(CLOCKF_REG, 0x9800);
-	current_volume = 200 - (Volume<<1);
+//	current_volume = 200 - (Volume<<1);
 	setVolume(current_volume, current_volume);
   return (USBD_OK);
   /* USER CODE END 0 */
@@ -192,16 +192,15 @@ static int8_t AUDIO_AudioCmd_FS(uint8_t* pbuf, uint32_t size, uint8_t cmd)
   {
     case AUDIO_CMD_START:
     	writeData(WAV_header_48kHz_16bit_stereo, sizeof(WAV_header_48kHz_16bit_stereo));
-//    	startSineTest();
     break;
 
     case AUDIO_CMD_PLAY:
     	writeData(pbuf, (uint16_t)size);
-    	GPIOA->ODR |= GPIO_PIN_1;
     break;
 
     case AUDIO_CMD_STOP:
-    	stopSineTest();
+    	writeCommandRegister(MODE_REG, 0x4808);
+    	setVolume(254, 254);
     break;
   }
   return (USBD_OK);
