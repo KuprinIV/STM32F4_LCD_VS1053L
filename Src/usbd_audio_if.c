@@ -32,7 +32,8 @@
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
+uint8_t current_volume = 60;
+extern uint8_t WAV_header_48kHz_16bit_stereo[44];
 /* USER CODE END PV */
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
@@ -154,9 +155,10 @@ USBD_AUDIO_ItfTypeDef USBD_AUDIO_fops_FS =
 static int8_t AUDIO_Init_FS(uint32_t AudioFreq, uint32_t Volume, uint32_t options)
 {
   /* USER CODE BEGIN 0 */
-  UNUSED(AudioFreq);
-  UNUSED(Volume);
-  UNUSED(options);
+	UNUSED(options);
+	writeCommandRegister(CLOCKF_REG, 0x9800);
+	current_volume = 200 - (Volume<<1);
+	setVolume(current_volume, current_volume);
   return (USBD_OK);
   /* USER CODE END 0 */
 }
@@ -170,6 +172,8 @@ static int8_t AUDIO_DeInit_FS(uint32_t options)
 {
   /* USER CODE BEGIN 1 */
   UNUSED(options);
+  writeCommandRegister(MODE_REG, 0x4808);
+  setVolume(254, 254);
   return (USBD_OK);
   /* USER CODE END 1 */
 }
@@ -187,14 +191,19 @@ static int8_t AUDIO_AudioCmd_FS(uint8_t* pbuf, uint32_t size, uint8_t cmd)
   switch(cmd)
   {
     case AUDIO_CMD_START:
+    	writeData(WAV_header_48kHz_16bit_stereo, sizeof(WAV_header_48kHz_16bit_stereo));
+//    	startSineTest();
     break;
 
     case AUDIO_CMD_PLAY:
+    	writeData(pbuf, (uint16_t)size);
+    	GPIOA->ODR |= GPIO_PIN_1;
+    break;
+
+    case AUDIO_CMD_STOP:
+    	stopSineTest();
     break;
   }
-  UNUSED(pbuf);
-  UNUSED(size);
-  UNUSED(cmd);
   return (USBD_OK);
   /* USER CODE END 2 */
 }
@@ -207,7 +216,8 @@ static int8_t AUDIO_AudioCmd_FS(uint8_t* pbuf, uint32_t size, uint8_t cmd)
 static int8_t AUDIO_VolumeCtl_FS(uint8_t vol)
 {
   /* USER CODE BEGIN 3 */
-  UNUSED(vol);
+	current_volume = 200 - (vol<<1);
+	setVolume(current_volume, current_volume);
   return (USBD_OK);
   /* USER CODE END 3 */
 }
@@ -220,7 +230,11 @@ static int8_t AUDIO_VolumeCtl_FS(uint8_t vol)
 static int8_t AUDIO_MuteCtl_FS(uint8_t cmd)
 {
   /* USER CODE BEGIN 4 */
-  UNUSED(cmd);
+	if(cmd == 0){
+		setVolume(current_volume, current_volume);
+	}else{
+		setVolume(254, 254);
+	}
   return (USBD_OK);
   /* USER CODE END 4 */
 }
@@ -233,9 +247,8 @@ static int8_t AUDIO_MuteCtl_FS(uint8_t cmd)
 static int8_t AUDIO_PeriodicTC_FS(uint8_t *pbuf, uint32_t size, uint8_t cmd)
 {
   /* USER CODE BEGIN 5 */
-  UNUSED(pbuf);
-  UNUSED(size);
   UNUSED(cmd);
+  writeData(pbuf, (uint16_t)size);
   return (USBD_OK);
   /* USER CODE END 5 */
 }

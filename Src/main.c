@@ -240,6 +240,7 @@ int main(void)
   MX_FATFS_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
+  MX_USB_DEVICE_Init();
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
   // init pause buffer data
   for(int i = 0; i < 19200; i++){
@@ -1049,7 +1050,6 @@ void vApplicationStackOverflowHook( xTaskHandle xTask, signed char *pcTaskName)
 __weak void TouchGFX_Task(void *argument)
 {
   /* init code for USB_DEVICE */
-  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 5 */
 
   /* Infinite loop */
@@ -1071,7 +1071,6 @@ void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
   static int sdStatus;
-  MX_USB_DEVICE_Init();
   /* Infinite loop */
   for(;;)
   {
