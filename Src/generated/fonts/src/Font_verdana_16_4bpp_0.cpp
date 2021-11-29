@@ -1,8 +1,7 @@
 #include <touchgfx/hal/Types.hpp>
 
 FONT_GLYPH_LOCATION_FLASH_PRAGMA
-KEEP extern const uint8_t unicodes_verdana_16_4bpp_0[] FONT_GLYPH_LOCATION_FLASH_ATTRIBUTE =
-{
+KEEP extern const uint8_t unicodes_verdana_16_4bpp_0[] FONT_GLYPH_LOCATION_FLASH_ATTRIBUTE = {
     // Unicode: [0x0020]
     // (Has no glyph data)
     // Unicode: [0x0021]

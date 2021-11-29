@@ -3,7 +3,7 @@
 /*********************************************************************************/
 #include <gui_generated/soundrecord_screen/soundRecordViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include "BitmapDatabase.hpp"
+#include <BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
 soundRecordViewBase::soundRecordViewBase() :
@@ -16,13 +16,13 @@ soundRecordViewBase::soundRecordViewBase() :
 {
 
     __background.setPosition(0, 0, 272, 480);
-    __background.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
     box1.setPosition(0, 0, 272, 480);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 255));
+    box1.setColor(touchgfx::Color::getColorFromRGB(0, 255, 255));
 
     box2.setPosition(0, 300, 272, 38);
-    box2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 255));
+    box2.setColor(touchgfx::Color::getColorFromRGB(0, 255, 255));
 
     micRadioButton.setXY(48, 47);
     micRadioButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_INACTIVE_ID), touchgfx::Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_ACTIVE_ID), touchgfx::Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID));
@@ -30,14 +30,14 @@ soundRecordViewBase::soundRecordViewBase() :
     micRadioButton.setDeselectionEnabled(false);
 
     textArea1.setXY(70, 9);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID41));
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_R9QM));
 
     textArea2.setXY(92, 57);
-    textArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea2.setLinespacing(0);
-    textArea2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID42));
+    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_TV2F));
 
     lineRadioButton.setXY(147, 47);
     lineRadioButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_INACTIVE_ID), touchgfx::Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_ACTIVE_ID), touchgfx::Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID));
@@ -45,15 +45,15 @@ soundRecordViewBase::soundRecordViewBase() :
     lineRadioButton.setDeselectionEnabled(false);
 
     textArea3.setXY(191, 57);
-    textArea3.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea3.setLinespacing(0);
-    textArea3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID43));
+    textArea3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MLSJ));
 
     backButton.setXY(56, 405);
     backButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    backButton.setLabelText(touchgfx::TypedText(T_SINGLEUSEID44));
-    backButton.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    backButton.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    backButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_ZBZS));
+    backButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    backButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     backButton.setAction(buttonCallback);
 
     stopRecordButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
@@ -71,12 +71,12 @@ soundRecordViewBase::soundRecordViewBase() :
     recordCtrlButton.setAction(flexButtonCallback);
 
     recordStatusText.setXY(90, 307);
-    recordStatusText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    recordStatusText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     recordStatusText.setLinespacing(0);
     recordStatusTextBuffer[0] = 0;
     recordStatusText.setWildcard(recordStatusTextBuffer);
     recordStatusText.resizeToCurrentText();
-    recordStatusText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID45));
+    recordStatusText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BNDT));
 
     monitoringVolumeSlider.setXY(52, 128);
     monitoringVolumeSlider.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_EDGE_FILL_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_EDGE_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_INDICATORS_SLIDER_HORIZONTAL_SMALL_ROUND_KNOB_ID));
@@ -86,22 +86,22 @@ soundRecordViewBase::soundRecordViewBase() :
     monitoringVolumeSlider.setNewValueCallback(sliderValueChangedCallback);
 
     textArea4.setXY(48, 97);
-    textArea4.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea4.setLinespacing(0);
-    textArea4.setTypedText(touchgfx::TypedText(T_SINGLEUSEID46));
+    textArea4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ZRB0));
 
     textArea5.setXY(100, 170);
-    textArea5.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea5.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea5.setLinespacing(0);
-    textArea5.setTypedText(touchgfx::TypedText(T_SINGLEUSEID47));
+    textArea5.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FX34));
 
     micGainPicker.setXY(73, 195);
     micGainPicker.setPickerValueChangedCallback(micGainPickerPickerValueChangedCallback);
 
     textArea6.setXY(41, 240);
-    textArea6.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea6.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea6.setLinespacing(0);
-    textArea6.setTypedText(touchgfx::TypedText(T_SINGLEUSEID49));
+    textArea6.setTypedText(touchgfx::TypedText(T___SINGLEUSE_PGXB));
 
     samplingFreqPicker.setXY(73, 265);
     samplingFreqPicker.setPickerValueChangedCallback(samplingFreqPickerPickerValueChangedCallback);

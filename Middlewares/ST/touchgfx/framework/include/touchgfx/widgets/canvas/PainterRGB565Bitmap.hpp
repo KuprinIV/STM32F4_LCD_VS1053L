@@ -1,29 +1,25 @@
-/**
-  ******************************************************************************
-  * This file is part of the TouchGFX 4.15.0 distribution.
-  *
-  * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under Ultimate Liberty license
-  * SLA0044, the "License"; You may not use this file except in compliance with
-  * the License. You may obtain a copy of the License at:
-  *                             www.st.com/SLA0044
-  *
-  ******************************************************************************
-  */
+/******************************************************************************
+* Copyright (c) 2018(-2021) STMicroelectronics.
+* All rights reserved.
+*
+* This file is part of the TouchGFX 4.18.0 distribution.
+*
+* This software is licensed under terms that can be found in the LICENSE file in
+* the root directory of this software component.
+* If no LICENSE file comes with this software, it is provided AS-IS.
+*
+*******************************************************************************/
 
 /**
  * @file touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp
  *
  * Declares the touchgfx::PainterRGB565Bitmap class.
  */
-#ifndef PAINTERRGB565BITMAP_HPP
-#define PAINTERRGB565BITMAP_HPP
+#ifndef TOUCHGFX_PAINTERRGB565BITMAP_HPP
+#define TOUCHGFX_PAINTERRGB565BITMAP_HPP
 
-#include <stdint.h>
+#include <touchgfx/hal/Types.hpp>
 #include <touchgfx/Bitmap.hpp>
-#include <touchgfx/transforms/DisplayTransformation.hpp>
 #include <touchgfx/widgets/canvas/AbstractPainterRGB565.hpp>
 
 namespace touchgfx
@@ -43,13 +39,14 @@ public:
      * Initializes a new instance of the PainterRGB565Bitmap class.
      *
      * @param  bmp   (Optional) The bitmap, default is #BITMAP_INVALID.
-     * @param  alpha (Optional) the alpha, default is 255 i.e. solid.
      */
-    PainterRGB565Bitmap(const Bitmap& bmp = Bitmap(BITMAP_INVALID), uint8_t alpha = 255)
-        : AbstractPainterRGB565(), bitmapARGB8888Pointer(0), bitmapRGB565Pointer(0), bitmapAlphaPointer(0)
+    PainterRGB565Bitmap(const Bitmap& bmp = Bitmap(BITMAP_INVALID))
+        : AbstractPainterRGB565(),
+          bitmapARGB8888Pointer(0), bitmapRGB565Pointer(0), bitmapAlphaPointer(0),
+          bitmap(), bitmapRectToFrameBuffer(),
+          xOffset(0), yOffset(0), isTiled(false)
     {
         setBitmap(bmp);
-        setAlpha(alpha);
     }
 
     /**
@@ -59,12 +56,31 @@ public:
      */
     void setBitmap(const Bitmap& bmp);
 
+    /**
+     * Instruct the painter to tile the bitmap specified. The bitmap will be tiled both horizontally
+     * and vertically.
+     *
+     * @param   tiled   True if tiled.
+     *
+     * @see setOffset
+     */
+    virtual void setTiled(bool tiled);
+
+    /**
+     * Sets an offset for the bitmap used. The x and y coordinates specifies how far the bitmap
+     * should be moved to the right and down. This works for tiled bitmaps and non-tiled bitmaps.
+     *
+     * @param   x   The x coordinate.
+     * @param   y   The y coordinate.
+     *
+     * @see setTiled
+     */
+    virtual void setOffset(int16_t x, int16_t y);
+
     virtual void render(uint8_t* ptr, int x, int xAdjust, int y, unsigned count, const uint8_t* covers);
 
 protected:
     virtual bool renderInit();
-
-    virtual bool renderNext(uint8_t& red, uint8_t& green, uint8_t& blue, uint8_t& alpha);
 
     const uint32_t* bitmapARGB8888Pointer; ///< Pointer to the bitmap (ARGB8888)
     const uint16_t* bitmapRGB565Pointer;   ///< Pointer to the bitmap (RGB565)
@@ -72,8 +88,12 @@ protected:
 
     Bitmap bitmap;                ///< The bitmap to be used when painting
     Rect bitmapRectToFrameBuffer; ///< Bitmap rectangle translated to framebuffer coordinates
+
+    int16_t xOffset; ///< The x offset of the bitmap
+    int16_t yOffset; ///< The y offset of the bitmap
+    bool isTiled;    ///< True if bitmap should be tiled, false if not
 };
 
 } // namespace touchgfx
 
-#endif // PAINTERRGB565BITMAP_HPP
+#endif // TOUCHGFX_PAINTERRGB565BITMAP_HPP

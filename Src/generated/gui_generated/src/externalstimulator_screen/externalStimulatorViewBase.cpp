@@ -4,7 +4,7 @@
 #include <gui_generated/externalstimulator_screen/externalStimulatorViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-#include "BitmapDatabase.hpp"
+#include <BitmapDatabase.hpp>
 
 externalStimulatorViewBase::externalStimulatorViewBase() :
     buttonCallback(this, &externalStimulatorViewBase::buttonCallbackHandler),
@@ -13,15 +13,15 @@ externalStimulatorViewBase::externalStimulatorViewBase() :
 {
 
     __background.setPosition(0, 0, 272, 480);
-    __background.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
     box1.setPosition(0, 0, 272, 480);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 255));
+    box1.setColor(touchgfx::Color::getColorFromRGB(0, 255, 255));
 
     textArea1.setXY(76, 20);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID79));
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_S203));
 
     maxVolumeSlider.setXY(47, 52);
     maxVolumeSlider.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_EDGE_FILL_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_EDGE_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_INDICATORS_SLIDER_HORIZONTAL_SMALL_ROUND_KNOB_ID));
@@ -32,16 +32,16 @@ externalStimulatorViewBase::externalStimulatorViewBase() :
 
     backButton.setXY(56, 405);
     backButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    backButton.setLabelText(touchgfx::TypedText(T_SINGLEUSEID80));
-    backButton.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    backButton.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    backButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_A23Y));
+    backButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    backButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     backButton.setAction(buttonCallback);
 
     testCtrlButton.setXY(56, 345);
     testCtrlButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    testCtrlButton.setLabelText(touchgfx::TypedText(T_SINGLEUSEID81));
-    testCtrlButton.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    testCtrlButton.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    testCtrlButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_IKAT));
+    testCtrlButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    testCtrlButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     testCtrlButton.setAction(buttonCallback);
 
     testProgressBar.setXY(44, 136);
@@ -49,28 +49,28 @@ externalStimulatorViewBase::externalStimulatorViewBase() :
     testProgressBar.setRange(0, 5);
     testProgressBar.setDirection(touchgfx::AbstractDirectionProgress::RIGHT);
     testProgressBar.setBackground(touchgfx::Bitmap(BITMAP_BLUE_PROGRESSINDICATORS_BG_MEDIUM_PROGRESS_INDICATOR_BG_SQUARE_0_DEGREES_ID));
-    testProgressBar.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 151, 255));
+    testProgressBar.setColor(touchgfx::Color::getColorFromRGB(0, 151, 255));
     testProgressBar.setValue(0);
 
     box2.setPosition(0, 163, 272, 25);
-    box2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 255));
+    box2.setColor(touchgfx::Color::getColorFromRGB(0, 255, 255));
 
     testProgressText.setXY(90, 163);
     testProgressText.setVisible(false);
-    testProgressText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    testProgressText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     testProgressText.setLinespacing(0);
     testProgressTextBuffer[0] = 0;
     testProgressText.setWildcard(testProgressTextBuffer);
     testProgressText.resizeToCurrentText();
-    testProgressText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID82));
+    testProgressText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FAA6));
 
     stimTypePicker.setXY(71, 233);
     stimTypePicker.setPickerValueChangedCallback(stimTypePickerPickerValueChangedCallback);
 
     textArea2.setXY(67, 200);
-    textArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea2.setLinespacing(0);
-    textArea2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID83));
+    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Z6QO));
 
     add(__background);
     add(box1);

@@ -3,7 +3,7 @@
 /*********************************************************************************/
 #include <gui_generated/main_screen_screen/main_screenViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include "BitmapDatabase.hpp"
+#include <BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
 main_screenViewBase::main_screenViewBase() :
@@ -13,23 +13,23 @@ main_screenViewBase::main_screenViewBase() :
 {
 
     __background.setPosition(0, 0, 272, 480);
-    __background.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
     backgroundBox.setPosition(0, 0, 272, 480);
-    backgroundBox.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 255));
+    backgroundBox.setColor(touchgfx::Color::getColorFromRGB(0, 255, 255));
 
     testFatFSBtn.setXY(51, 30);
     testFatFSBtn.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    testFatFSBtn.setLabelText(touchgfx::TypedText(T_SINGLEUSEID1));
-    testFatFSBtn.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    testFatFSBtn.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    testFatFSBtn.setLabelText(touchgfx::TypedText(T___SINGLEUSE_E05O));
+    testFatFSBtn.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    testFatFSBtn.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     testFatFSBtn.setAction(buttonCallback);
 
     codecTestBtn.setXY(51, 90);
     codecTestBtn.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    codecTestBtn.setLabelText(touchgfx::TypedText(T_SINGLEUSEID2));
-    codecTestBtn.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    codecTestBtn.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    codecTestBtn.setLabelText(touchgfx::TypedText(T___SINGLEUSE_03VY));
+    codecTestBtn.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    codecTestBtn.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     codecTestBtn.setAction(buttonCallback);
 
     backlightSB.setXY(47, 411);
@@ -40,60 +40,60 @@ main_screenViewBase::main_screenViewBase() :
     backlightSB.setNewValueCallback(sliderValueChangedCallback);
 
     textArea2.setXY(70, 376);
-    textArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea2.setLinespacing(0);
-    Unicode::snprintf(textArea2Buffer, TEXTAREA2_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID10).getText());
+    Unicode::snprintf(textArea2Buffer, TEXTAREA2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_QM09).getText());
     textArea2.setWildcard(textArea2Buffer);
     textArea2.resizeToCurrentText();
-    textArea2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID9));
+    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_R10A));
 
     soundRecordBtn.setXY(51, 150);
     soundRecordBtn.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    soundRecordBtn.setLabelText(touchgfx::TypedText(T_SINGLEUSEID40));
-    soundRecordBtn.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    soundRecordBtn.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    soundRecordBtn.setLabelText(touchgfx::TypedText(T___SINGLEUSE_KRP1));
+    soundRecordBtn.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    soundRecordBtn.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     soundRecordBtn.setAction(buttonCallback);
 
     startScopeButton.setXY(51, 210);
     startScopeButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    startScopeButton.setLabelText(touchgfx::TypedText(T_SINGLEUSEID77));
-    startScopeButton.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    startScopeButton.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    startScopeButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_88CQ));
+    startScopeButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    startScopeButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     startScopeButton.setAction(buttonCallback);
 
     externalStimButton.setXY(51, 270);
     externalStimButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    externalStimButton.setLabelText(touchgfx::TypedText(T_SINGLEUSEID78));
-    externalStimButton.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    externalStimButton.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    externalStimButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_3ZA4));
+    externalStimButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    externalStimButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     externalStimButton.setAction(buttonCallback);
 
     sdCardIcon.setXY(230, 3);
     sdCardIcon.setBitmap(touchgfx::Bitmap(BITMAP_MICRO_SD_CARD_ID));
 
     modalWindow.setBackground(touchgfx::BitmapId(BITMAP_MODAL_WINDOW_ID), 40, 168);
-    modalWindow.setShadeColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    modalWindow.setShadeColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     modalWindow.setShadeAlpha(150);
     modalWindow.hide();
 
     closeModalWndButton.setBoxWithBorderPosition(0, 0, 68, 28);
     closeModalWndButton.setBorderSize(1);
-    closeModalWndButton.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(192, 192, 192), touchgfx::Color::getColorFrom24BitRGB(85, 92, 102), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    closeModalWndButton.setText(TypedText(T_SINGLEUSEID53));
+    closeModalWndButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(192, 192, 192), touchgfx::Color::getColorFromRGB(85, 92, 102), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    closeModalWndButton.setText(TypedText(T___SINGLEUSE_J7A7));
     closeModalWndButton.setTextPosition(0, 3, 68, 28);
-    closeModalWndButton.setTextColors(touchgfx::Color::getColorFrom24BitRGB(10, 10, 10), touchgfx::Color::getColorFrom24BitRGB(10, 10, 10));
+    closeModalWndButton.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
     closeModalWndButton.setPosition(102, 269, 68, 28);
     closeModalWndButton.setVisible(false);
     closeModalWndButton.setAction(flexButtonCallback);
 
     modalWindowMessageText.setXY(121, 234);
     modalWindowMessageText.setVisible(false);
-    modalWindowMessageText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    modalWindowMessageText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     modalWindowMessageText.setLinespacing(0);
     modalWindowMessageTextBuffer[0] = 0;
     modalWindowMessageText.setWildcard(modalWindowMessageTextBuffer);
     modalWindowMessageText.resizeToCurrentText();
-    modalWindowMessageText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID54));
+    modalWindowMessageText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_O5B9));
 
     usbIcon.setXY(248, 3);
     usbIcon.setBitmap(touchgfx::Bitmap(BITMAP_USB_ID));

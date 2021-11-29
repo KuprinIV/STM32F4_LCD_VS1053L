@@ -34,6 +34,7 @@
 /* Private variables ---------------------------------------------------------*/
 uint8_t current_volume = 5;
 extern uint8_t WAV_header_48kHz_16bit_stereo[44];
+recordingParams mic_params = {48000, 1024, 2048, 2, 1}; // 48 kHz, mic gain 1, max auto gain 2, input is mic, linear PCM
 /* USER CODE END PV */
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
@@ -124,6 +125,7 @@ static int8_t AUDIO_VolumeCtl_FS(uint8_t vol);
 static int8_t AUDIO_MuteCtl_FS(uint8_t cmd);
 static int8_t AUDIO_PeriodicTC_FS(uint8_t *pbuf, uint32_t size, uint8_t cmd);
 static int8_t AUDIO_GetState_FS(void);
+static int8_t AUDIO_MicSendData(int16_t* in_buffer, uint16_t* pos, uint16_t* size);
 
 /* USER CODE BEGIN PRIVATE_FUNCTIONS_DECLARATION */
 
@@ -142,6 +144,7 @@ USBD_AUDIO_ItfTypeDef USBD_AUDIO_fops_FS =
   AUDIO_MuteCtl_FS,
   AUDIO_PeriodicTC_FS,
   AUDIO_GetState_FS,
+  AUDIO_MicSendData,
 };
 
 /* Private functions ---------------------------------------------------------*/
@@ -158,7 +161,6 @@ static int8_t AUDIO_Init_FS(uint32_t AudioFreq, uint32_t Volume, uint32_t option
 	UNUSED(options);
 	writeCommandRegister(CLOCKF_REG, 0x9800);
 //	current_volume = 200 - (Volume<<1);
-	setVolume(current_volume, current_volume);
   return (USBD_OK);
   /* USER CODE END 0 */
 }
@@ -172,6 +174,9 @@ static int8_t AUDIO_DeInit_FS(uint32_t options)
 {
   /* USER CODE BEGIN 1 */
   UNUSED(options);
+  // stop recording
+  stopRecording();
+  // set SM_CANCEL bit
   writeCommandRegister(MODE_REG, 0x4808);
   setVolume(254, 254);
   return (USBD_OK);
@@ -191,7 +196,13 @@ static int8_t AUDIO_AudioCmd_FS(uint8_t* pbuf, uint32_t size, uint8_t cmd)
   switch(cmd)
   {
     case AUDIO_CMD_START:
+    	// init speaker
     	writeData(WAV_header_48kHz_16bit_stereo, sizeof(WAV_header_48kHz_16bit_stereo));
+    	setVolume(current_volume, current_volume);
+
+    	// init mic
+		startRecording(&mic_params);
+		setMonitoringVolume(0x01); // set monitoring volume -84 dB
     break;
 
     case AUDIO_CMD_PLAY:
@@ -199,7 +210,7 @@ static int8_t AUDIO_AudioCmd_FS(uint8_t* pbuf, uint32_t size, uint8_t cmd)
     break;
 
     case AUDIO_CMD_STOP:
-    	writeCommandRegister(MODE_REG, 0x4808);
+//    	writeCommandRegister(MODE_REG, 0x4808);
     	setVolume(254, 254);
     break;
   }
@@ -286,7 +297,24 @@ void HalfTransfer_CallBack_FS(void)
 }
 
 /* USER CODE BEGIN PRIVATE_FUNCTIONS_IMPLEMENTATION */
+static int8_t AUDIO_MicSendData(int16_t* in_buffer, uint16_t* pos, uint16_t* size)
+{
+	uint16_t hdat0 = 0, hdat1 = 0;
 
+	// read mic data from codec
+	hdat1 = readCommandRegister(HDAT1_REG); // read number of samples
+	for(uint16_t i = 0; i < hdat1; i++){
+		hdat0 = readCommandRegister(HDAT0_REG); // read sample
+		in_buffer[(*pos)+i] = hdat0;
+		(*size)++;
+		if(((*pos)+i) >= AUDIO_IN_PACKET)
+		{
+			(*pos) = 0;
+			break;
+		}
+	}
+	return (USBD_OK);
+}
 /* USER CODE END PRIVATE_FUNCTIONS_IMPLEMENTATION */
 
 /**

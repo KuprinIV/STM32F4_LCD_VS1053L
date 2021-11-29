@@ -3,7 +3,7 @@
 /*********************************************************************************/
 #include <gui_generated/testfatfs_screen_screen/testFatFS_screenViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include "BitmapDatabase.hpp"
+#include <BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
 testFatFS_screenViewBase::testFatFS_screenViewBase() :
@@ -12,49 +12,49 @@ testFatFS_screenViewBase::testFatFS_screenViewBase() :
 {
 
     __background.setPosition(0, 0, 272, 480);
-    __background.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
     box1.setPosition(0, 0, 272, 480);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 255));
+    box1.setColor(touchgfx::Color::getColorFromRGB(0, 255, 255));
 
     box2.setPosition(10, 18, 252, 375);
-    box2.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    box2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
 
     backButtonFatFS.setXY(53, 405);
     backButtonFatFS.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    backButtonFatFS.setLabelText(touchgfx::TypedText(T_SINGLEUSEID18));
-    backButtonFatFS.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    backButtonFatFS.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    backButtonFatFS.setLabelText(touchgfx::TypedText(T___SINGLEUSE_S4S0));
+    backButtonFatFS.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    backButtonFatFS.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     backButtonFatFS.setAction(buttonCallback);
 
     fileListScrollContainer.setPosition(10, 18, 252, 375);
     fileListScrollContainer.enableHorizontalScroll(false);
-    fileListScrollContainer.setScrollbarsColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    fileListScrollContainer.setScrollbarsColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     fileListScrollContainer.setScrollbarsPermanentlyVisible();
 
     modalWindow.setBackground(touchgfx::BitmapId(BITMAP_MODAL_WINDOW_ID), 40, 165);
-    modalWindow.setShadeColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    modalWindow.setShadeColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     modalWindow.setShadeAlpha(150);
     modalWindow.hide();
 
     closeModalWndButton.setBoxWithBorderPosition(0, 0, 68, 28);
     closeModalWndButton.setBorderSize(1);
-    closeModalWndButton.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(192, 192, 192), touchgfx::Color::getColorFrom24BitRGB(85, 92, 102), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    closeModalWndButton.setText(TypedText(T_SINGLEUSEID51));
+    closeModalWndButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(192, 192, 192), touchgfx::Color::getColorFromRGB(85, 92, 102), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    closeModalWndButton.setText(TypedText(T___SINGLEUSE_G8XN));
     closeModalWndButton.setTextPosition(0, 3, 68, 28);
-    closeModalWndButton.setTextColors(touchgfx::Color::getColorFrom24BitRGB(10, 10, 10), touchgfx::Color::getColorFrom24BitRGB(10, 10, 10));
+    closeModalWndButton.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
     closeModalWndButton.setPosition(102, 269, 68, 28);
     closeModalWndButton.setVisible(false);
     closeModalWndButton.setAction(flexButtonCallback);
 
     modalWindowMessageText.setXY(121, 234);
     modalWindowMessageText.setVisible(false);
-    modalWindowMessageText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    modalWindowMessageText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     modalWindowMessageText.setLinespacing(0);
     modalWindowMessageTextBuffer[0] = 0;
     modalWindowMessageText.setWildcard(modalWindowMessageTextBuffer);
     modalWindowMessageText.resizeToCurrentText();
-    modalWindowMessageText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID52));
+    modalWindowMessageText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FWDE));
 
     add(__background);
     add(box1);
@@ -71,11 +71,11 @@ void testFatFS_screenViewBase::setupScreen()
 
 }
 
-//Called when the screen is done with transition/load
+//Called when the screen transition ends
 void testFatFS_screenViewBase::afterTransition()
 {
     //startTestFatFSAction
-    //When screen is entered call virtual function
+    //When screen transition ends call virtual function
     //Call startTestFatFS
     startTestFatFS();
 }

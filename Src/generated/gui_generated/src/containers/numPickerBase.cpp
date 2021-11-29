@@ -4,7 +4,7 @@
 #include <gui_generated/containers/numPickerBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-#include "BitmapDatabase.hpp"
+#include <BitmapDatabase.hpp>
 
 numPickerBase::numPickerBase() :
     flexButtonCallback(this, &numPickerBase::flexButtonCallbackHandler),
@@ -13,19 +13,19 @@ numPickerBase::numPickerBase() :
     setWidth(130);
     setHeight(35);
     box1.setPosition(30, 0, 70, 35);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
 
     pickerText.setXY(37, 5);
-    pickerText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    pickerText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     pickerText.setLinespacing(0);
     pickerTextBuffer[0] = 0;
     pickerText.setWildcard(pickerTextBuffer);
     pickerText.resizeToCurrentText();
-    pickerText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID48));
+    pickerText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9DRD));
 
     goPrevValueButton.setBoxWithBorderPosition(0, 0, 30, 35);
     goPrevValueButton.setBorderSize(0);
-    goPrevValueButton.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(128, 143, 150), touchgfx::Color::getColorFrom24BitRGB(85, 98, 102), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    goPrevValueButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(128, 143, 150), touchgfx::Color::getColorFromRGB(85, 98, 102), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
     goPrevValueButton.setIconBitmaps(Bitmap(BITMAP_DARK_ICONS_BACK_ARROW_32_ID), Bitmap(BITMAP_DARK_ICONS_BACK_ARROW_32_ID));
     goPrevValueButton.setIconXY(5, 2);
     goPrevValueButton.setPosition(0, 0, 30, 35);
@@ -33,7 +33,7 @@ numPickerBase::numPickerBase() :
 
     goNextValueButton.setBoxWithBorderPosition(0, 0, 30, 35);
     goNextValueButton.setBorderSize(0);
-    goNextValueButton.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(128, 143, 150), touchgfx::Color::getColorFrom24BitRGB(85, 98, 102), touchgfx::Color::getColorFrom24BitRGB(128, 143, 150), touchgfx::Color::getColorFrom24BitRGB(85, 98, 102));
+    goNextValueButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(128, 143, 150), touchgfx::Color::getColorFromRGB(85, 98, 102), touchgfx::Color::getColorFromRGB(128, 143, 150), touchgfx::Color::getColorFromRGB(85, 98, 102));
     goNextValueButton.setIconBitmaps(Bitmap(BITMAP_DARK_ICONS_NEXT_ARROW_32_ID), Bitmap(BITMAP_DARK_ICONS_NEXT_ARROW_32_ID));
     goNextValueButton.setIconXY(5, 2);
     goNextValueButton.setPosition(100, 0, 30, 35);
@@ -67,3 +67,4 @@ void numPickerBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonCont
         goNextValueButtonPressed();
     }
 }
+

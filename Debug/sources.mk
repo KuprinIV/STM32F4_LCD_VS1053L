@@ -40,10 +40,6 @@ Middlewares/Third_Party/FreeRTOS/Source \
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang \
 Src \
-Src/build/MINGW32_NT-6.2/gui/src/codectestscreen_screen \
-Src/build/MINGW32_NT-6.2/gui/src/containers \
-Src/build/MINGW32_NT-6.2/gui/src/main_screen_screen \
-Src/build/MINGW32_NT-6.2/gui/src/testfatfs_screen_screen \
 Src/generated/fonts/src \
 Src/generated/gui_generated/src/codectestscreen_screen \
 Src/generated/gui_generated/src/common \

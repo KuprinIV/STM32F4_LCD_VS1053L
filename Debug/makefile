@@ -33,10 +33,6 @@ RM := rm -rf
 -include Src/generated/gui_generated/src/common/subdir.mk
 -include Src/generated/gui_generated/src/codectestscreen_screen/subdir.mk
 -include Src/generated/fonts/src/subdir.mk
--include Src/build/MINGW32_NT-6.2/gui/src/testfatfs_screen_screen/subdir.mk
--include Src/build/MINGW32_NT-6.2/gui/src/main_screen_screen/subdir.mk
--include Src/build/MINGW32_NT-6.2/gui/src/containers/subdir.mk
--include Src/build/MINGW32_NT-6.2/gui/src/codectestscreen_screen/subdir.mk
 -include Src/subdir.mk
 -include Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/subdir.mk
 -include Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/subdir.mk
@@ -112,8 +108,8 @@ all:
 main-build: STM32F4_LCD.elf secondary-outputs
 
 # Tool invocations
-STM32F4_LCD.elf: $(OBJS) $(USER_OBJS) C:\Users\Ilya\Documents\Projects\Firmware\ Projects\STM32CudeIDE\STM32F4_LCD\STM32F429IGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "STM32F4_LCD.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Ilya\Documents\Projects\Firmware Projects\STM32CudeIDE\STM32F4_LCD\STM32F429IGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F4_LCD.map" -Wl,--gc-sections -static -L"C:\Users\Ilya\Documents\Projects\Firmware Projects\STM32CudeIDE\STM32F4_LCD\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+STM32F4_LCD.elf: $(OBJS) $(USER_OBJS) D:\Projects\stm32F3\STM32F4_LCD_VS1053L\STM32F429IGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "STM32F4_LCD.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Projects\stm32F3\STM32F4_LCD_VS1053L\STM32F429IGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F4_LCD.map" -Wl,--gc-sections -static -L"D:\Projects\stm32F3\STM32F4_LCD_VS1053L\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" -L"D:\Projects\stm32F3\STM32F4_LCD_VS1053L\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

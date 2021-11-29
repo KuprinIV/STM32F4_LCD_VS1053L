@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.18.0">
+  <Texts>
+    <Text Id="__SingleUse_E05O" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">SD File Viewer</Translation>
+    </Text>
+    <Text Id="__SingleUse_03VY" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Codec Test</Translation>
+    </Text>
+    <Text Id="__SingleUse_R10A" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Backlight: &lt;d&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_QM09" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">50</Translation>
+    </Text>
+    <Text Id="__SingleUse_CO37" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">L:</Translation>
+    </Text>
+    <Text Id="__SingleUse_V9Z4" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">R:</Translation>
+    </Text>
+    <Text Id="__SingleUse_OAUW" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Setup volume</Translation>
+    </Text>
+    <Text Id="__SingleUse_URDC" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Go back</Translation>
+    </Text>
+    <Text Id="codecStartTestBtnLabel" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Start Test</Translation>
+    </Text>
+    <Text Id="codecStopTestBtnLabel" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Stop Test</Translation>
+    </Text>
+    <Text Id="testFatFS_unmountError" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Unmount Error</Translation>
+    </Text>
+    <Text Id="__SingleUse_EXG0" TypographyId="Typography_01" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_TADM" TypographyId="Typography_01" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="ResourceId1" TypographyId="Typography_01" Alignment="Left" Direction="LTR">
+      <Translation Language="GB"> !"#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</Translation>
+    </Text>
+    <Text Id="__SingleUse_S4S0" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Go back</Translation>
+    </Text>
+    <Text Id="SingleUseId26" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Go back</Translation>
+    </Text>
+    <Text Id="SingleUseId27" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="SingleUseId28" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Loading...</Translation>
+    </Text>
+    <Text Id="playBtnLabel" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Play</Translation>
+    </Text>
+    <Text Id="playCancelBthLabel" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Stop</Translation>
+    </Text>
+    <Text Id="__SingleUse_OCR8" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Go back</Translation>
+    </Text>
+    <Text Id="__SingleUse_3PE2" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_U57E" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Volume</Translation>
+    </Text>
+    <Text Id="ResourceId2" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB"> !"#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</Translation>
+    </Text>
+    <Text Id="codecStartPCMTestBth" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Start PCM test</Translation>
+    </Text>
+    <Text Id="codecStopPCMTestBth" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Stop PCM test</Translation>
+    </Text>
+    <Text Id="__SingleUse_BA90" TypographyId="Typography_01" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_J9EA" TypographyId="Typography_01" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">--:--</Translation>
+    </Text>
+    <Text Id="__SingleUse_YX63" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_F9PB" TypographyId="Typography_01" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">--:--</Translation>
+    </Text>
+    <Text Id="__SingleUse_KRP1" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Sound record</Translation>
+    </Text>
+    <Text Id="__SingleUse_R9QM" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Signal source</Translation>
+    </Text>
+    <Text Id="__SingleUse_TV2F" TypographyId="Typography_01" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Mic</Translation>
+    </Text>
+    <Text Id="__SingleUse_MLSJ" TypographyId="Typography_01" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Line</Translation>
+    </Text>
+    <Text Id="__SingleUse_ZBZS" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Go back</Translation>
+    </Text>
+    <Text Id="__SingleUse_BNDT" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_ZRB0" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Monitoring volume</Translation>
+    </Text>
+    <Text Id="__SingleUse_FX34" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Mic gain</Translation>
+    </Text>
+    <Text Id="__SingleUse_9DRD" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_PGXB" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Sampling frequency</Translation>
+    </Text>
+    <Text Id="__SingleUse_UXHY" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_G8XN" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Close</Translation>
+    </Text>
+    <Text Id="__SingleUse_FWDE" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_J7A7" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Close</Translation>
+    </Text>
+    <Text Id="__SingleUse_O5B9" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_8ZG5" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Bass</Translation>
+    </Text>
+    <Text Id="__SingleUse_28GJ" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Invert left channel</Translation>
+    </Text>
+    <Text Id="__SingleUse_3O3T" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Bass boost: &lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_OY7N" TypographyId="Typography_01" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">off</Translation>
+    </Text>
+    <Text Id="__SingleUse_GOM1" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Bass low freq: &lt;value&gt; Hz</Translation>
+    </Text>
+    <Text Id="__SingleUse_3XVT" TypographyId="Typography_01" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">20</Translation>
+    </Text>
+    <Text Id="__SingleUse_UYUC" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Treble</Translation>
+    </Text>
+    <Text Id="__SingleUse_DUZU" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Treble boost: &lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_FYD5" TypographyId="Typography_01" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">off</Translation>
+    </Text>
+    <Text Id="__SingleUse_QL5I" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Treble start freq: &lt;value&gt; kHz</Translation>
+    </Text>
+    <Text Id="__SingleUse_2OT0" TypographyId="Typography_01" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">1</Translation>
+    </Text>
+    <Text Id="__SingleUse_2U0V" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Close</Translation>
+    </Text>
+    <Text Id="__SingleUse_9W19" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Sine</Translation>
+    </Text>
+    <Text Id="__SingleUse_TKFK" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">PCM</Translation>
+    </Text>
+    <Text Id="__SingleUse_EXKD" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Carry freq.:</Translation>
+    </Text>
+    <Text Id="__SingleUse_OEGJ" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Mod.freq.:</Translation>
+    </Text>
+    <Text Id="__SingleUse_ZJOZ" TypographyId="Typography_01" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Deviation:</Translation>
+    </Text>
+    <Text Id="__SingleUse_VC74" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Mic</Translation>
+    </Text>
+    <Text Id="__SingleUse_SE8P" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Line</Translation>
+    </Text>
+    <Text Id="__SingleUse_E40A" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Go back</Translation>
+    </Text>
+    <Text Id="__SingleUse_88CQ" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Oscilloscope</Translation>
+    </Text>
+    <Text Id="__SingleUse_3ZA4" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">External stim</Translation>
+    </Text>
+    <Text Id="__SingleUse_S203" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Max volume</Translation>
+    </Text>
+    <Text Id="__SingleUse_A23Y" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Go back</Translation>
+    </Text>
+    <Text Id="__SingleUse_IKAT" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Start test</Translation>
+    </Text>
+    <Text Id="__SingleUse_FAA6" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Step &lt;value&gt; of 5</Translation>
+    </Text>
+    <Text Id="__SingleUse_Z6QO" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Stimulus type</Translation>
+    </Text>
+  </Texts>
+  <Typographies>
+    <Typography Id="Typography_00" Font="verdana.ttf" Size="20" Bpp="4" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="Typography_01" Font="verdana.ttf" Size="16" Bpp="4" FallbackCharacter="?" />
+  </Typographies>
+</TextDatabase>

@@ -3,7 +3,7 @@
 /*********************************************************************************/
 #include <gui_generated/codectestscreen_screen/codecTestScreenViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include "BitmapDatabase.hpp"
+#include <BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
 codecTestScreenViewBase::codecTestScreenViewBase() :
@@ -16,16 +16,16 @@ codecTestScreenViewBase::codecTestScreenViewBase() :
 {
 
     __background.setPosition(0, 0, 272, 480);
-    __background.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
     backgroundBox.setPosition(0, 0, 272, 480);
-    backgroundBox.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 255));
+    backgroundBox.setColor(touchgfx::Color::getColorFromRGB(0, 255, 255));
 
     testControlBtn.setXY(56, 337);
     testControlBtn.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
     testControlBtn.setLabelText(touchgfx::TypedText(T_CODECSTARTTESTBTNLABEL));
-    testControlBtn.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    testControlBtn.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    testControlBtn.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    testControlBtn.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     testControlBtn.setAction(buttonCallback);
 
     volumeLeftSB.setXY(72, 112);
@@ -43,25 +43,25 @@ codecTestScreenViewBase::codecTestScreenViewBase() :
     volumeRightSB.setNewValueCallback(sliderValueChangedCallback);
 
     textArea1.setXY(40, 117);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID13));
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CO37));
 
     textArea2.setXY(40, 161);
-    textArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea2.setLinespacing(0);
-    textArea2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID14));
+    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_V9Z4));
 
     textArea3.setXY(72, 79);
-    textArea3.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea3.setLinespacing(0);
-    textArea3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID15));
+    textArea3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OAUW));
 
     backButton.setXY(56, 405);
     backButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    backButton.setLabelText(touchgfx::TypedText(T_SINGLEUSEID16));
-    backButton.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    backButton.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    backButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_URDC));
+    backButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    backButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     backButton.setAction(buttonCallback);
 
     sineTestRadioButton.setXY(43, 23);
@@ -70,9 +70,9 @@ codecTestScreenViewBase::codecTestScreenViewBase() :
     sineTestRadioButton.setDeselectionEnabled(false);
 
     textArea4.setXY(92, 33);
-    textArea4.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea4.setLinespacing(0);
-    textArea4.setTypedText(touchgfx::TypedText(T_SINGLEUSEID67));
+    textArea4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9W19));
 
     pcmTestRadioButton.setXY(154, 23);
     pcmTestRadioButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_INACTIVE_ID), touchgfx::Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_ACTIVE_ID), touchgfx::Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID));
@@ -80,9 +80,9 @@ codecTestScreenViewBase::codecTestScreenViewBase() :
     pcmTestRadioButton.setDeselectionEnabled(false);
 
     textArea5.setXY(198, 33);
-    textArea5.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea5.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea5.setLinespacing(0);
-    textArea5.setTypedText(touchgfx::TypedText(T_SINGLEUSEID68));
+    textArea5.setTypedText(touchgfx::TypedText(T___SINGLEUSE_TKFK));
 
     carryFreqNumPicker.setXY(108, 199);
     carryFreqNumPicker.setPickerValueChangedCallback(carryFreqNumPickerPickerValueChangedCallback);
@@ -94,19 +94,19 @@ codecTestScreenViewBase::codecTestScreenViewBase() :
     deviationNumPicker.setPickerValueChangedCallback(deviationNumPickerPickerValueChangedCallback);
 
     textArea6.setXY(9, 206);
-    textArea6.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea6.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea6.setLinespacing(0);
-    textArea6.setTypedText(touchgfx::TypedText(T_SINGLEUSEID69));
+    textArea6.setTypedText(touchgfx::TypedText(T___SINGLEUSE_EXKD));
 
     textArea7.setXY(14, 247);
-    textArea7.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea7.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea7.setLinespacing(0);
-    textArea7.setTypedText(touchgfx::TypedText(T_SINGLEUSEID70));
+    textArea7.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OEGJ));
 
     textArea8.setXY(15, 289);
-    textArea8.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea8.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea8.setLinespacing(0);
-    textArea8.setTypedText(touchgfx::TypedText(T_SINGLEUSEID71));
+    textArea8.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ZJOZ));
 
     add(__background);
     add(backgroundBox);

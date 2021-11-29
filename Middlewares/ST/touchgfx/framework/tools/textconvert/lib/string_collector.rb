@@ -1,19 +1,14 @@
-##############################################################################
-# This file is part of the TouchGFX 4.15.0 distribution.
+# Copyright (c) 2018(-2021) STMicroelectronics.
+# All rights reserved.
 #
-# <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
-# All rights reserved.</center></h2>
+# This file is part of the TouchGFX 4.18.0 distribution.
 #
-# This software component is licensed by ST under Ultimate Liberty license
-# SLA0044, the "License"; You may not use this file except in compliance with
-# the License. You may obtain a copy of the License at:
-#                             www.st.com/SLA0044
+# This software is licensed under terms that can be found in the LICENSE file in
+# the root directory of this software component.
+# If no LICENSE file comes with this software, it is provided AS-IS.
 #
-##############################################################################
-
+###############################################################################/
 CollectorStruct = Struct.new(:text_entries, :typographies)
-
-$warning_prefix = "\nWARNING (TextConverter): "
 
 class StringCollector < CollectorStruct
   def run
@@ -27,20 +22,21 @@ class StringCollector < CollectorStruct
         all_strings.push(translation)
       end
     end
-    #sort by length
-    all_strings.sort_by!(){|x| -x.length}
+    # sort by: Same length => sort by text, otherwise reverse sort on length
+    # [ 'Slide','Yes','Cover','None' ] => [ 'Cover', 'Slide', 'None', 'Yes' ]
+    all_strings.sort!{|x,y| x.length == y.length ? x.text <=> y.text : y.length <=> x.length }
 
     #collect all string indeces, and add to characters array
     all_strings.each do |translation|
       #lookup translation in hash
       #if not found, add to characters and insert index in hash for translation and all suffices
       #if found, do nothing
-      unicodes = translation.unicodes
+      unicodes = translation.unicodes # This includes a terminating zero character
       index = string_indices[unicodes]
-      if not index
+      if !index
         new_index = characters.length
         #puts "new string: #{translation.to_cpp} index: #{new_index}"
-        characters.concat(unicodes).push(0)
+        characters.concat(unicodes)
         for start in 0 .. unicodes.length-1
           sub_string = unicodes[start..-1]
           # if the substring is present, all shorter substrings are also present, so do not add again

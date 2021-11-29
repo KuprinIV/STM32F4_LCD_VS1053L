@@ -681,17 +681,23 @@ static uint8_t *USBD_AUDIO_GetCfgDesc(uint16_t *length)
 static uint8_t USBD_AUDIO_DataIn(USBD_HandleTypeDef *pdev, uint8_t epnum)
 {
   USBD_AUDIO_HandleTypeDef *haudio;
+  static uint16_t pos;
+  uint16_t size = 0;
 
   haudio = (USBD_AUDIO_HandleTypeDef*) pdev->pClassData;
 
   if (epnum == (AUDIO_IN_EP & 0x7F))
   {
-	 haudio->in_buffer_half = !haudio->in_buffer_half;    // also serves as init to 1 or 0
-	 uint16_t prev = (AUDIO_IN_PACKET / 2) * !haudio->in_buffer_half;
-//	 ADC_to_MIC();
+//	 haudio->in_buffer_half = !haudio->in_buffer_half;    // also serves as init to 1 or 0
+//	 uint16_t prev = (AUDIO_IN_PACKET / 2) * !haudio->in_buffer_half;
+
+	 ((USBD_AUDIO_ItfTypeDef *)pdev->pUserData)->MicSendData(haudio->in_buffer, &pos, &size);
 
 	 USBD_LL_FlushEP  (pdev, AUDIO_IN_EP);
-	 USBD_LL_Transmit (pdev, AUDIO_IN_EP, (uint8_t*)(haudio->in_buffer + prev), AUDIO_IN_PACKET);
+	 USBD_LL_Transmit (pdev, AUDIO_IN_EP, (uint8_t*)(haudio->in_buffer + pos), size<<1);
+	 if(pos != 0){
+		 pos += size;
+	 }
   }
   /* Only OUT data are processed */
   return (uint8_t)USBD_OK;

@@ -1,72 +1,54 @@
-##############################################################################
-# This file is part of the TouchGFX 4.15.0 distribution.
+# Copyright (c) 2018(-2021) STMicroelectronics.
+# All rights reserved.
 #
-# <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
-# All rights reserved.</center></h2>
+# This file is part of the TouchGFX 4.18.0 distribution.
 #
-# This software component is licensed by ST under Ultimate Liberty license
-# SLA0044, the "License"; You may not use this file except in compliance with
-# the License. You may obtain a copy of the License at:
-#                             www.st.com/SLA0044
+# This software is licensed under terms that can be found in the LICENSE file in
+# the root directory of this software component.
+# If no LICENSE file comes with this software, it is provided AS-IS.
 #
-##############################################################################
-
+###############################################################################/
 require 'lib/excel_reader'
 
 class TextEntriesExcelReader
   attr_reader :reader
 
   def initialize(file_name)
-    #puts "Running TextEntriesExcelReader:init, #{Time.now.strftime("%H:%M:%S:%L")}"
     header_row_number = 3
     header_column_number = 2
     @reader = ExcelReader.new(file_name, "Translation", header_row_number, header_column_number)
     @text_entries = TextEntries.new
   end
 
+  def language_capitalization(lang)
+    lang_upcase = lang.upcase
+    @languages.find { |l| l.upcase == lang_upcase }
+  end
+  
   def run
-    #puts "Running TextEntriesExcelReader:run, #{Time.now.strftime("%H:%M:%S:%L")}"
     reader.read_header do |header|
-      @alignments = header.select { |column| column.match(/^.*-ALIGNMENT$/i) }.map(&:capitalize)
-      @directions = header.select { |column| column.match(/^.*-DIRECTION$/i) }.map(&:capitalize)
-      @typographies = header.select { |column| column.match(/^.*-TYPOGRAPHY$/i) }.map(&:capitalize)
-      @languages = header.select { |column| column.match(/^(\w{1,3})$/i ) }.map(&:capitalize)
+      @alignments = header.select { |column| column.match(/^.*-ALIGNMENT$/i) }
+      @directions = header.select { |column| column.match(/^.*-DIRECTION$/i) }
+      @typographies = header.select { |column| column.match(/^.*-TYPOGRAPHY$/i) }
+      @languages = header.select { |column| column.match(/^(\w{1,3})$/i ) }
     end
 
     # Check for undefined languages in language specific typographies
-    # Any undefined language specific typographies are removed
-    @typographies.select! do |typography|
-      language, _ = typography.split('-')
-
-      if not @languages.include?(language)
-        raise "#{$warning_prefix} Unknown language in column #{language}-TYPOGRAPHY"
-      end
-
-      @languages.include?(language)
+    @typographies.each do |typography|
+      language, _ = typography.upcase.split('-')
+      fail "ERROR: Unknown language in column #{language}-TYPOGRAPHY" if !@languages.any?{ |lang| lang.upcase == language }
     end
 
     # Check for undefined languages in language specific alignments
-    # Any undefined language specific alignments are removed
-    @alignments.select! do |alignment|
-      language, _ = alignment.split('-')
-
-      if not @languages.include?(language)
-        raise "#{$warning_prefix} Unknown language in column #{language}-ALIGNMENT"
-      end
-
-      @languages.include?(language)
+    @alignments.each do |alignment|
+      language, _ = alignment.upcase.split('-')
+      fail "ERROR: Unknown language in column #{language}-ALIGNMENT" if not @languages.any?{ |lang| lang.upcase == language }
     end
 
     # Check for undefined languages in language specific directions
-    # Any undefined language specific directions are removed
-    @directions.select! do |direction|
-      language, _ = direction.split('-')
-
-      if not @languages.include?(language)
-        raise "#{$warning_prefix} Unknown language in column #{language}-DIRECTION"
-      end
-
-      @languages.include?(language)
+    @directions.each do |direction|
+      language, _ = direction.upcase.split('-')
+      fail "ERROR: Unknown language in column #{language}-DIRECTION" if not @languages.any?{ |lang| lang.upcase == language }
     end
 
     reader.read_rows do |row|
@@ -84,15 +66,14 @@ class TextEntriesExcelReader
 
       if text_id && default_typography
         unless text_id.match(/^([0-9a-zA-Z_])*$/)
-          puts "Illegal characters found in Text ID '#{text_id}'"
-          fail
+          fail "ERROR: Illegal characters found in Text ID '#{text_id}'"
         end
-        
+
         text_entry = TextEntry.new(text_id, default_typography, default_alignment, default_direction)
 
         @typographies.each do |typography|
           language, _ = typography.split('-')
-          #puts "adding typography #{typography}"
+          language = language_capitalization(language)
           t = row[typography]
           t = t.strip if t
           text_entry.add_typography(language, t)
@@ -100,7 +81,7 @@ class TextEntriesExcelReader
 
         @alignments.each do |alignment|
           language, _ = alignment.split('-')
-          #puts "adding alignment #{alignment}"
+          language = language_capitalization(language)
           a = row[alignment]
           a = a.strip if a
           text_entry.add_alignment(language, a)
@@ -108,14 +89,13 @@ class TextEntriesExcelReader
 
         @directions.each do |direction|
           language, _ = direction.split('-')
-          #puts "adding direction #{direction}"
+          language = language_capitalization(language)
           d = row[direction]
           d = d.strip if d
           text_entry.add_direction(language, d)
         end
 
         @languages.each do |language|
-          #puts "adding language #{language}"
           # Do *not* strip leading/trailing whitespace from translations.
           text_entry.add_translation(language, row[language])
         end

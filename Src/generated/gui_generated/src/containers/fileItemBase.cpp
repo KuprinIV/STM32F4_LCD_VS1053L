@@ -3,7 +3,7 @@
 /*********************************************************************************/
 #include <gui_generated/containers/fileItemBase.hpp>
 #include <touchgfx/Color.hpp>
-#include "BitmapDatabase.hpp"
+#include <BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
 fileItemBase::fileItemBase() :
@@ -13,11 +13,11 @@ fileItemBase::fileItemBase() :
     setWidth(252);
     setHeight(30);
     box1.setPosition(0, 0, 252, 30);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
 
     itemFileButton.setBoxWithBorderPosition(0, 0, 179, 30);
     itemFileButton.setBorderSize(0);
-    itemFileButton.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(128, 128, 128), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    itemFileButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(128, 128, 128), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
     itemFileButton.setPosition(0, 0, 179, 30);
     itemFileButton.setAction(flexButtonCallback);
 
@@ -25,20 +25,20 @@ fileItemBase::fileItemBase() :
     image1.setBitmap(touchgfx::Bitmap(BITMAP_FILE_ID));
 
     fileName.setXY(27, 5);
-    fileName.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    fileName.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     fileName.setLinespacing(0);
     fileNameBuffer[0] = 0;
     fileName.setWildcard(fileNameBuffer);
     fileName.resizeToCurrentText();
-    fileName.setTypedText(touchgfx::TypedText(T_SINGLEUSEID23));
+    fileName.setTypedText(touchgfx::TypedText(T___SINGLEUSE_TADM));
 
     fileSizeText.setXY(179, 5);
-    fileSizeText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    fileSizeText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     fileSizeText.setLinespacing(0);
     fileSizeTextBuffer[0] = 0;
     fileSizeText.setWildcard(fileSizeTextBuffer);
     fileSizeText.resizeToCurrentText();
-    fileSizeText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID50));
+    fileSizeText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UXHY));
 
     add(box1);
     add(itemFileButton);
@@ -62,3 +62,4 @@ void fileItemBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonConta
         emitOnFileItemClickedCallback(fileNameBuffer);
     }
 }
+

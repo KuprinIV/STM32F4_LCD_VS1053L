@@ -4,7 +4,7 @@
 #include <gui_generated/containers/playerSettingsBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-#include "BitmapDatabase.hpp"
+#include <BitmapDatabase.hpp>
 
 playerSettingsBase::playerSettingsBase() :
     sliderValueChangedCallback(this, &playerSettingsBase::sliderValueChangedCallbackHandler),
@@ -15,12 +15,12 @@ playerSettingsBase::playerSettingsBase() :
     setWidth(250);
     setHeight(400);
     box1.setPosition(0, 0, 250, 400);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 255));
+    box1.setColor(touchgfx::Color::getColorFromRGB(0, 255, 255));
 
     textArea1.setXY(104, 47);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID55));
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8ZG5));
 
     diffRadioButton.setXY(38, 13);
     diffRadioButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_PAGEINDICATOR_DOT_INDICATOR_SMALL_NORMAL_ID), touchgfx::Bitmap(BITMAP_BLUE_PAGEINDICATOR_DOT_INDICATOR_SMALL_NORMAL_ID), touchgfx::Bitmap(BITMAP_BLUE_PAGEINDICATOR_DOT_INDICATOR_SMALL_HIGHLIGHT_ID), touchgfx::Bitmap(BITMAP_BLUE_PAGEINDICATOR_DOT_INDICATOR_SMALL_HIGHLIGHT_ID));
@@ -28,9 +28,9 @@ playerSettingsBase::playerSettingsBase() :
     diffRadioButton.setDeselectionEnabled(true);
 
     textArea2.setXY(63, 10);
-    textArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea2.setLinespacing(0);
-    textArea2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID56));
+    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_28GJ));
 
     bassAmpSlider.setXY(38, 92);
     bassAmpSlider.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_EDGE_FILL_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_EDGE_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_INDICATORS_SLIDER_HORIZONTAL_SMALL_ROUND_KNOB_ID));
@@ -40,12 +40,12 @@ playerSettingsBase::playerSettingsBase() :
     bassAmpSlider.setNewValueCallback(sliderValueChangedCallback);
 
     bassBoostText.setXY(70, 72);
-    bassBoostText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    bassBoostText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     bassBoostText.setLinespacing(0);
-    Unicode::snprintf(bassBoostTextBuffer, BASSBOOSTTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID58).getText());
+    Unicode::snprintf(bassBoostTextBuffer, BASSBOOSTTEXT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_OY7N).getText());
     bassBoostText.setWildcard(bassBoostTextBuffer);
     bassBoostText.resizeToCurrentText();
-    bassBoostText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID57));
+    bassBoostText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3O3T));
 
     bassFreqSlider.setXY(38, 146);
     bassFreqSlider.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_EDGE_FILL_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_EDGE_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_INDICATORS_SLIDER_HORIZONTAL_SMALL_ROUND_KNOB_ID));
@@ -55,17 +55,17 @@ playerSettingsBase::playerSettingsBase() :
     bassFreqSlider.setNewValueCallback(sliderValueChangedCallback);
 
     bassFreqText.setXY(44, 126);
-    bassFreqText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    bassFreqText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     bassFreqText.setLinespacing(0);
-    Unicode::snprintf(bassFreqTextBuffer, BASSFREQTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID60).getText());
+    Unicode::snprintf(bassFreqTextBuffer, BASSFREQTEXT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_3XVT).getText());
     bassFreqText.setWildcard(bassFreqTextBuffer);
     bassFreqText.resizeToCurrentText();
-    bassFreqText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID59));
+    bassFreqText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GOM1));
 
     textArea3.setXY(97, 194);
-    textArea3.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea3.setLinespacing(0);
-    textArea3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID61));
+    textArea3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UYUC));
 
     trebleAmpSlider.setXY(40, 239);
     trebleAmpSlider.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_EDGE_FILL_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_EDGE_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_INDICATORS_SLIDER_HORIZONTAL_SMALL_ROUND_KNOB_ID));
@@ -75,12 +75,12 @@ playerSettingsBase::playerSettingsBase() :
     trebleAmpSlider.setNewValueCallback(sliderValueChangedCallback);
 
     trebleBoostText.setXY(64, 219);
-    trebleBoostText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    trebleBoostText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     trebleBoostText.setLinespacing(0);
-    Unicode::snprintf(trebleBoostTextBuffer, TREBLEBOOSTTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID63).getText());
+    Unicode::snprintf(trebleBoostTextBuffer, TREBLEBOOSTTEXT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_FYD5).getText());
     trebleBoostText.setWildcard(trebleBoostTextBuffer);
     trebleBoostText.resizeToCurrentText();
-    trebleBoostText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID62));
+    trebleBoostText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_DUZU));
 
     trebleFreqSlider.setXY(40, 293);
     trebleFreqSlider.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_EDGE_FILL_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_EDGE_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_INDICATORS_SLIDER_HORIZONTAL_SMALL_ROUND_KNOB_ID));
@@ -90,12 +90,12 @@ playerSettingsBase::playerSettingsBase() :
     trebleFreqSlider.setNewValueCallback(sliderValueChangedCallback);
 
     trebleFreqText.setXY(31, 273);
-    trebleFreqText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    trebleFreqText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     trebleFreqText.setLinespacing(0);
-    Unicode::snprintf(trebleFreqTextBuffer, TREBLEFREQTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID65).getText());
+    Unicode::snprintf(trebleFreqTextBuffer, TREBLEFREQTEXT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_2OT0).getText());
     trebleFreqText.setWildcard(trebleFreqTextBuffer);
     trebleFreqText.resizeToCurrentText();
-    trebleFreqText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID64));
+    trebleFreqText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QL5I));
 
     add(box1);
     add(textArea1);
@@ -173,3 +173,4 @@ void playerSettingsBase::radioButtonDeselectedCallbackHandler(const touchgfx::Ab
         diffRadioButtonDeselected();
     }
 }
+

@@ -3,8 +3,10 @@
 /*********************************************************************************/
 #include <gui_generated/oscilloscope_screen/oscilloscopeViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include "BitmapDatabase.hpp"
+#include <BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
+
 
 oscilloscopeViewBase::oscilloscopeViewBase() :
     buttonCallback(this, &oscilloscopeViewBase::buttonCallbackHandler),
@@ -17,13 +19,13 @@ oscilloscopeViewBase::oscilloscopeViewBase() :
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
 
     __background.setPosition(0, 0, 272, 480);
-    __background.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
     box1.setPosition(0, 0, 272, 91);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 255));
+    box1.setColor(touchgfx::Color::getColorFromRGB(0, 255, 255));
 
     box2.setPosition(0, 91, 272, 254);
-    box2.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    box2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
 
     dynamicGraph1.setScale(1);
     dynamicGraph1.setPosition(0, 91, 272, 254);
@@ -32,29 +34,29 @@ oscilloscopeViewBase::oscilloscopeViewBase() :
     dynamicGraph1.setGraphRangeY(-32768, 32767);
 
     dynamicGraph1MajorXAxisGrid.setScale(1);
-    dynamicGraph1MajorXAxisGrid.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    dynamicGraph1MajorXAxisGrid.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     dynamicGraph1MajorXAxisGrid.setInterval(800);
     dynamicGraph1MajorXAxisGrid.setLineWidth(1);
     dynamicGraph1.addGraphElement(dynamicGraph1MajorXAxisGrid);
 
     dynamicGraph1MajorYAxisGrid.setScale(1);
-    dynamicGraph1MajorYAxisGrid.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    dynamicGraph1MajorYAxisGrid.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     dynamicGraph1MajorYAxisGrid.setInterval(6554);
     dynamicGraph1MajorYAxisGrid.setLineWidth(1);
     dynamicGraph1.addGraphElement(dynamicGraph1MajorYAxisGrid);
 
     dynamicGraph1Line1.setScale(1);
-    dynamicGraph1Line1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    dynamicGraph1Line1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     dynamicGraph1Line1.setPainter(dynamicGraph1Line1Painter);
     dynamicGraph1Line1.setLineWidth(2);
     dynamicGraph1.addGraphElement(dynamicGraph1Line1);
 
-    dynamicGraph1VerticalFrontline.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    dynamicGraph1VerticalFrontline.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     dynamicGraph1VerticalFrontline.setGapLineWidth(1);
     dynamicGraph1.addGraphElement(dynamicGraph1VerticalFrontline);
 
     box3.setPosition(0, 345, 272, 135);
-    box3.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 255));
+    box3.setColor(touchgfx::Color::getColorFromRGB(0, 255, 255));
 
     xScalePicker.setXY(3, 53);
     xScalePicker.setPickerValueChangedCallback(xScalePickerPickerValueChangedCallback);
@@ -73,20 +75,20 @@ oscilloscopeViewBase::oscilloscopeViewBase() :
     lineRadioButton.setDeselectionEnabled(false);
 
     textArea1.setXY(76, 14);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID74));
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_VC74));
 
     textArea2.setXY(193, 14);
-    textArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea2.setLinespacing(0);
-    textArea2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID75));
+    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SE8P));
 
     backButton.setXY(56, 405);
     backButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    backButton.setLabelText(touchgfx::TypedText(T_SINGLEUSEID76));
-    backButton.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    backButton.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    backButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_E40A));
+    backButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    backButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     backButton.setAction(buttonCallback);
 
     scopeCtrlButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));

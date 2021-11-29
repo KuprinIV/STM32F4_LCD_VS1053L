@@ -3,7 +3,7 @@
 /*********************************************************************************/
 #include <gui_generated/playaudiofile_screen/playAudioFileViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include "BitmapDatabase.hpp"
+#include <BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
 playAudioFileViewBase::playAudioFileViewBase() :
@@ -15,16 +15,16 @@ playAudioFileViewBase::playAudioFileViewBase() :
 {
 
     __background.setPosition(0, 0, 272, 480);
-    __background.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
     box1.setPosition(0, 0, 272, 480);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 255));
+    box1.setColor(touchgfx::Color::getColorFromRGB(0, 255, 255));
 
     backButton.setXY(51, 405);
     backButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    backButton.setLabelText(touchgfx::TypedText(T_SINGLEUSEID30));
-    backButton.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    backButton.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    backButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_OCR8));
+    backButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    backButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     backButton.setAction(buttonCallback);
 
     playControlButton.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
@@ -50,18 +50,18 @@ playAudioFileViewBase::playAudioFileViewBase() :
 
     flexButton1.setBoxWithBorderPosition(0, 0, 50, 50);
     flexButton1.setBorderSize(5);
-    flexButton1.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    flexButton1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
     flexButton1.setIconXY(0, 0);
     flexButton1.setPosition(188, 81, 50, 50);
     flexButton1.setVisible(false);
 
     fileName.setXY(81, 209);
-    fileName.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    fileName.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     fileName.setLinespacing(0);
     fileNameBuffer[0] = 0;
     fileName.setWildcard(fileNameBuffer);
     fileName.resizeToCurrentText();
-    fileName.setTypedText(touchgfx::TypedText(T_SINGLEUSEID34));
+    fileName.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3PE2));
 
     volumeSlider.setXY(49, 87);
     volumeSlider.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_EDGE_FILL_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_EDGE_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_INDICATORS_SLIDER_HORIZONTAL_SMALL_ROUND_KNOB_ID));
@@ -71,9 +71,9 @@ playAudioFileViewBase::playAudioFileViewBase() :
     volumeSlider.setNewValueCallback(sliderValueChangedCallback);
 
     textArea1.setXY(101, 56);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID35));
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_U57E));
 
     playingFileProgress.setXY(34, 251);
     playingFileProgress.setBitmaps(touchgfx::Bitmap(BITMAP_SLIDER_BACKGROUND_ID), touchgfx::Bitmap(BITMAP_SLIDER_FILLED_ID), touchgfx::Bitmap(BITMAP_SLIDER_INDICATOR_ID));
@@ -86,30 +86,30 @@ playAudioFileViewBase::playAudioFileViewBase() :
     playTimeContainer.setPosition(34, 275, 206, 28);
 
     playingTimeText.setXY(33, 279);
-    playingTimeText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    playingTimeText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     playingTimeText.setLinespacing(0);
-    Unicode::snprintf(playingTimeTextBuffer, PLAYINGTIMETEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID37).getText());
+    Unicode::snprintf(playingTimeTextBuffer, PLAYINGTIMETEXT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_J9EA).getText());
     playingTimeText.setWildcard(playingTimeTextBuffer);
     playingTimeText.resizeToCurrentText();
-    playingTimeText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID36));
+    playingTimeText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BA90));
 
     fileDurationText.setXY(204, 279);
-    fileDurationText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    fileDurationText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     fileDurationText.setLinespacing(0);
-    Unicode::snprintf(fileDurationTextBuffer, FILEDURATIONTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID39).getText());
+    Unicode::snprintf(fileDurationTextBuffer, FILEDURATIONTEXT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_F9PB).getText());
     fileDurationText.setWildcard(fileDurationTextBuffer);
     fileDurationText.resizeToCurrentText();
-    fileDurationText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID38));
+    fileDurationText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YX63));
 
     playingSettingsButton.setBoxWithBorderPosition(0, 0, 40, 40);
     playingSettingsButton.setBorderSize(0);
-    playingSettingsButton.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    playingSettingsButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 255, 255), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
     playingSettingsButton.setIconBitmaps(Bitmap(BITMAP_DARK_ICONS_SETTINGS_32_ID), Bitmap(BITMAP_DARK_ICONS_SETTINGS_32_ID));
     playingSettingsButton.setIconXY(4, 4);
     playingSettingsButton.setPosition(208, 22, 40, 40);
     playingSettingsButton.setAction(flexButtonCallback);
 
-    modalWindow.setShadeColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    modalWindow.setShadeColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     modalWindow.setShadeAlpha(150);
     modalWindow.hide();
 
@@ -118,10 +118,10 @@ playAudioFileViewBase::playAudioFileViewBase() :
 
     closeModalWindowButton.setBoxWithBorderPosition(0, 0, 93, 27);
     closeModalWindowButton.setBorderSize(1);
-    closeModalWindowButton.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(192, 192, 192), touchgfx::Color::getColorFrom24BitRGB(85, 92, 102), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    closeModalWindowButton.setText(TypedText(T_SINGLEUSEID66));
+    closeModalWindowButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(192, 192, 192), touchgfx::Color::getColorFromRGB(85, 92, 102), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    closeModalWindowButton.setText(TypedText(T___SINGLEUSE_2U0V));
     closeModalWindowButton.setTextPosition(0, 3, 93, 27);
-    closeModalWindowButton.setTextColors(touchgfx::Color::getColorFrom24BitRGB(10, 10, 10), touchgfx::Color::getColorFrom24BitRGB(10, 10, 10));
+    closeModalWindowButton.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
     closeModalWindowButton.setPosition(90, 390, 93, 27);
     closeModalWindowButton.setVisible(false);
     closeModalWindowButton.setAction(flexButtonCallback);

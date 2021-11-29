@@ -2,63 +2,28 @@
   "Application": {
     "Screens": [
       {
+        "Name": "main_screen",
         "Components": [
           {
             "Type": "Box",
-            "Color": {
-              "Red": 0,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
             "Name": "backgroundBox",
-            "X": 0,
-            "Y": 0,
             "Width": 272,
             "Height": 480,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Color": {
+              "Green": 255,
+              "Blue": 255
+            }
           },
           {
             "Type": "ButtonWithLabel",
-            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
-            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId1",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0",
-            "Style": "Style4",
             "Name": "testFatFSBtn",
             "X": 51,
             "Y": 30,
             "Width": 170,
             "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Type": "ButtonWithLabel",
             "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
             "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId2",
+            "TextId": "__SingleUse_E05O",
             "ReleasedColor": {
               "Red": 255,
               "Green": 255,
@@ -70,110 +35,75 @@
               "Blue": 255
             },
             "TextRotation": "0",
-            "Style": "Style4",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
             "Name": "codecTestBtn",
             "X": 51,
             "Y": 90,
             "Width": 170,
             "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_03VY",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
           },
           {
             "Type": "Slider",
+            "Name": "backlightSB",
+            "X": 47,
+            "Y": 411,
+            "Width": 179,
+            "Height": 34,
             "IsHorizontalSlider": true,
             "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_fill.png",
             "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_back.png",
             "Indicator": "__designer\\Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.png",
             "BackgroundX": 3,
             "BackgroundY": 7,
-            "IndicatorPos": 0,
             "IndicatorMax": 125,
-            "IndicatorMin": 0,
             "ValueMax": 99,
             "ValueMin": 1,
-            "InitValue": 50,
-            "Name": "backlightSB",
-            "X": 47,
-            "Y": 411,
-            "Width": 179,
-            "Height": 34,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "InitValue": 50
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId9",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "TextId": "SingleUseId10",
-              "UseBuffer": true,
-              "BufferSize": 10
-            },
             "Name": "textArea2",
             "X": 70,
             "Y": 376,
             "Width": 133,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_R10A",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_QM09",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "ButtonWithLabel",
-            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
-            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId40",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0",
-            "Style": "Style4",
             "Name": "soundRecordBtn",
             "X": 51,
             "Y": 150,
             "Width": 170,
             "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Type": "ButtonWithLabel",
             "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
             "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId77",
+            "TextId": "__SingleUse_KRP1",
             "ReleasedColor": {
               "Red": 255,
               "Green": 255,
@@ -185,25 +115,18 @@
               "Blue": 255
             },
             "TextRotation": "0",
-            "Style": "Style4",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
             "Name": "startScopeButton",
             "X": 51,
             "Y": 210,
             "Width": 170,
             "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Type": "ButtonWithLabel",
             "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
             "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId78",
+            "TextId": "__SingleUse_88CQ",
             "ReleasedColor": {
               "Red": 255,
               "Green": 255,
@@ -215,75 +138,70 @@
               "Blue": 255
             },
             "TextRotation": "0",
-            "Style": "Style4",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ButtonWithLabel",
             "Name": "externalStimButton",
             "X": 51,
             "Y": 270,
             "Width": 170,
             "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_3ZA4",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4"
           },
           {
             "Type": "Image",
-            "RelativeFilename": "micro-sd-card.png",
-            "Alpha": 255,
             "Name": "sdCardIcon",
             "X": 230,
             "Y": 3,
             "Width": 16,
             "Height": 16,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "RelativeFilename": "micro-sd-card.png"
           },
           {
-            "Components": [],
             "Type": "ModalWindow",
+            "Name": "modalWindow",
+            "Width": 272,
+            "Height": 480,
+            "Visible": false,
             "FileName": "Modal_window.png",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
             "ModalX": 40,
             "ModalY": 168,
             "ModalWidth": 192,
             "ModalHeight": 144,
-            "ContX": 0,
-            "ContY": 0,
             "Alpha": 150,
-            "Name": "modalWindow",
-            "X": 0,
-            "Y": 0,
-            "Width": 272,
-            "Height": 480,
-            "Visible": false,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Components": []
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "closeModalWndButton",
+            "X": 102,
+            "Y": 269,
+            "Width": 68,
+            "Height": 28,
+            "Visible": false,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
             "ButtonStyles": [
               {
                 "Type": "TextButtonStyle",
-                "X": 0,
                 "Y": 3,
-                "TextId": "SingleUseId53",
+                "TextId": "__SingleUse_J7A7",
                 "TextRotation": "0",
                 "ColorReleased": {
                   "Red": 10,
@@ -298,8 +216,6 @@
               },
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
                 "Width": 68,
                 "Height": 28,
                 "LockToFlexButtonSize": true,
@@ -315,7 +231,6 @@
                   "Blue": 102
                 },
                 "ColorBorderReleased": {
-                  "Red": 0,
                   "Green": 51,
                   "Blue": 102
                 },
@@ -325,68 +240,36 @@
                   "Blue": 153
                 }
               }
-            ],
-            "Name": "closeModalWndButton",
-            "X": 102,
-            "Y": 269,
-            "Width": 68,
-            "Height": 28,
-            "Visible": false,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId54",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": true,
-              "BufferSize": 20
-            },
             "Name": "modalWindowMessageText",
             "X": 121,
             "Y": 234,
-            "Width": 0,
             "Height": 20,
             "Visible": false,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_O5B9",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
           },
           {
             "Type": "Image",
-            "RelativeFilename": "usb.png",
-            "Alpha": 255,
             "Name": "usbIcon",
             "X": 248,
             "Y": 3,
             "Width": 16,
             "Height": 16,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "RelativeFilename": "usb.png"
           }
         ],
         "Interactions": [
           {
             "InteractionName": "testFatFSBtnAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "testFatFSBtn"
@@ -398,7 +281,6 @@
           },
           {
             "InteractionName": "codecTestBtnAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "codecTestBtn"
@@ -411,7 +293,6 @@
           },
           {
             "InteractionName": "backlightSBAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerSliderValueChanged",
               "TriggerComponent": "backlightSB"
@@ -423,7 +304,6 @@
           },
           {
             "InteractionName": "soundRecordBtnPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "soundRecordBtn"
@@ -435,7 +315,6 @@
           },
           {
             "InteractionName": "closeModalWindowAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "closeModalWndButton"
@@ -447,7 +326,6 @@
           },
           {
             "InteractionName": "goToTestFATFSScreen",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerNone"
             },
@@ -459,7 +337,6 @@
           },
           {
             "InteractionName": "goToSoundRecordScreen",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerNone"
             },
@@ -471,7 +348,6 @@
           },
           {
             "InteractionName": "goToOscilloscopeScreen",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "startScopeButton"
@@ -484,7 +360,6 @@
           },
           {
             "InteractionName": "externalStimButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "externalStimButton"
@@ -495,38 +370,30 @@
               "ActionComponent": "externalStimulator"
             }
           }
-        ],
-        "Name": "main_screen",
-        "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 0
+        ]
       },
       {
+        "Name": "codecTestScreen",
         "Components": [
           {
             "Type": "Box",
-            "Color": {
-              "Red": 0,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
             "Name": "backgroundBox",
-            "X": 0,
-            "Y": 0,
             "Width": 272,
             "Height": 480,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Color": {
+              "Green": 255,
+              "Blue": 255
+            }
           },
           {
             "Type": "ButtonWithLabel",
+            "Name": "testControlBtn",
+            "X": 56,
+            "Y": 337,
+            "Width": 170,
+            "Height": 60,
             "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
             "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "Alpha": 255,
             "TextId": "codecStartTestBtnLabel",
             "ReleasedColor": {
               "Red": 255,
@@ -539,149 +406,85 @@
               "Blue": 255
             },
             "TextRotation": "0",
-            "Style": "Style4",
-            "Name": "testControlBtn",
-            "X": 56,
-            "Y": 337,
-            "Width": 170,
-            "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Style": "Style4"
           },
           {
             "Type": "Slider",
-            "IsHorizontalSlider": true,
-            "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_fill.png",
-            "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_back.png",
-            "Indicator": "__designer\\Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.png",
-            "BackgroundX": 3,
-            "BackgroundY": 7,
-            "IndicatorPos": 0,
-            "IndicatorMax": 125,
-            "IndicatorMin": 0,
-            "ValueMax": 254,
-            "ValueMin": 0,
-            "InitValue": 127,
             "Name": "volumeLeftSB",
             "X": 72,
             "Y": 112,
             "Width": 179,
             "Height": 34,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Type": "Slider",
             "IsHorizontalSlider": true,
             "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_fill.png",
             "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_back.png",
             "Indicator": "__designer\\Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.png",
             "BackgroundX": 3,
             "BackgroundY": 7,
-            "IndicatorPos": 0,
             "IndicatorMax": 125,
-            "IndicatorMin": 0,
             "ValueMax": 254,
-            "ValueMin": 0,
-            "InitValue": 127,
+            "InitValue": 127
+          },
+          {
+            "Type": "Slider",
             "Name": "volumeRightSB",
             "X": 72,
             "Y": 156,
             "Width": 179,
             "Height": 34,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_fill.png",
+            "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_back.png",
+            "Indicator": "__designer\\Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.png",
+            "BackgroundX": 3,
+            "BackgroundY": 7,
+            "IndicatorMax": 125,
+            "ValueMax": 254,
+            "InitValue": 127
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId13",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea1",
             "X": 40,
             "Y": 117,
             "Width": 20,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_CO37",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId14",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea2",
             "X": 40,
             "Y": 161,
             "Width": 23,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_V9Z4",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId15",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea3",
             "X": 72,
             "Y": 79,
             "Width": 139,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_OAUW",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "ButtonWithLabel",
+            "Name": "backButton",
+            "X": 56,
+            "Y": 405,
+            "Width": 170,
+            "Height": 60,
             "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
             "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId16",
+            "TextId": "__SingleUse_URDC",
             "ReleasedColor": {
               "Red": 255,
               "Green": 255,
@@ -692,235 +495,123 @@
               "Green": 255,
               "Blue": 255
             },
-            "TextRotation": "0",
-            "Name": "backButton",
-            "X": 56,
-            "Y": 405,
-            "Width": 170,
-            "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextRotation": "0"
           },
           {
             "Type": "RadioButton",
-            "Alpha": 255,
-            "Selected": true,
-            "Deselectable": false,
-            "FileNameSelected": "__designer\\Blue_Radio_buttons_Radio_Round_button_active.png",
-            "FileNameSelectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_normal.png",
-            "FileNameUnselected": "__designer\\Blue_Radio_buttons_Radio_Round_button_inactive.png",
-            "FileNameUnselectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_pressed.png",
-            "Style": "Style3",
-            "RadioButtonGroup": "radioButtonGroup1",
             "Name": "sineTestRadioButton",
             "X": 43,
             "Y": 23,
             "Width": 44,
             "Height": 44,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Selected": true,
+            "FileNameSelected": "__designer\\Blue_Radio_buttons_Radio_Round_button_active.png",
+            "FileNameSelectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_normal.png",
+            "FileNameUnselected": "__designer\\Blue_Radio_buttons_Radio_Round_button_inactive.png",
+            "FileNameUnselectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_pressed.png",
+            "RadioButtonGroup": "radioButtonGroup1",
+            "Style": "Style3"
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId67",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea4",
             "X": 92,
             "Y": 33,
             "Width": 44,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_9W19",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "RadioButton",
-            "Alpha": 255,
-            "Selected": false,
-            "Deselectable": false,
-            "FileNameSelected": "__designer\\Blue_Radio_buttons_Radio_Round_button_active.png",
-            "FileNameSelectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_normal.png",
-            "FileNameUnselected": "__designer\\Blue_Radio_buttons_Radio_Round_button_inactive.png",
-            "FileNameUnselectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_pressed.png",
-            "Style": "Style3",
-            "RadioButtonGroup": "radioButtonGroup1",
             "Name": "pcmTestRadioButton",
             "X": 154,
             "Y": 23,
             "Width": 44,
             "Height": 44,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "FileNameSelected": "__designer\\Blue_Radio_buttons_Radio_Round_button_active.png",
+            "FileNameSelectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_normal.png",
+            "FileNameUnselected": "__designer\\Blue_Radio_buttons_Radio_Round_button_inactive.png",
+            "FileNameUnselectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_pressed.png",
+            "RadioButtonGroup": "radioButtonGroup1",
+            "Style": "Style3"
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId68",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea5",
             "X": 198,
             "Y": 33,
             "Width": 43,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_TKFK",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
-            "CustomContainerDefinitionName": "numPicker",
             "Type": "CustomContainerInstance",
             "Name": "carryFreqNumPicker",
             "X": 108,
             "Y": 199,
             "Width": 130,
             "Height": 35,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "CustomContainerDefinitionName": "numPicker"
           },
           {
-            "CustomContainerDefinitionName": "numPicker",
             "Type": "CustomContainerInstance",
             "Name": "modFreqNumPicker",
             "X": 108,
             "Y": 240,
             "Width": 130,
             "Height": 35,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "CustomContainerDefinitionName": "numPicker"
           },
           {
-            "CustomContainerDefinitionName": "numPicker",
             "Type": "CustomContainerInstance",
             "Name": "deviationNumPicker",
             "X": 108,
             "Y": 282,
             "Width": 130,
             "Height": 35,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "CustomContainerDefinitionName": "numPicker"
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId69",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea6",
             "X": 9,
             "Y": 206,
             "Width": 95,
             "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_EXKD",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId70",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea7",
             "X": 14,
             "Y": 247,
             "Width": 84,
             "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_OEGJ",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId71",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea8",
             "X": 15,
             "Y": 289,
             "Width": 83,
             "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_ZJOZ",
+            "TextRotation": "0",
+            "AutoSize": true
           }
         ],
         "Interactions": [
           {
             "InteractionName": "volumeLeftSBAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerSliderValueChanged",
               "TriggerComponent": "volumeLeftSB"
@@ -932,7 +623,6 @@
           },
           {
             "InteractionName": "volumeRightSBAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerSliderValueChanged",
               "TriggerComponent": "volumeRightSB"
@@ -944,7 +634,6 @@
           },
           {
             "InteractionName": "codecTestControlBtnAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "testControlBtn"
@@ -956,7 +645,6 @@
           },
           {
             "InteractionName": "backButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "backButton"
@@ -968,7 +656,6 @@
           },
           {
             "InteractionName": "carryFreqNumPickerValueChangeAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerCustom",
               "TriggerCustomTypeName": "numPicker pickerValueChanged happens",
@@ -981,7 +668,6 @@
           },
           {
             "InteractionName": "modFreqNumPickerValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerCustom",
               "TriggerCustomTypeName": "numPicker pickerValueChanged happens",
@@ -994,7 +680,6 @@
           },
           {
             "InteractionName": "deviationNumPickerValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerCustom",
               "TriggerCustomTypeName": "numPicker pickerValueChanged happens",
@@ -1007,7 +692,6 @@
           },
           {
             "InteractionName": "sineTestRBSelectedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerRadioButtonSelected",
               "TriggerComponent": "sineTestRadioButton"
@@ -1019,7 +703,6 @@
           },
           {
             "InteractionName": "pcmTestRBSelectedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerRadioButtonSelected",
               "TriggerComponent": "pcmTestRadioButton"
@@ -1029,59 +712,44 @@
               "FunctionName": "pcmTestRBSelected"
             }
           }
-        ],
-        "Name": "codecTestScreen",
-        "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 0
+        ]
       },
       {
+        "Name": "testFatFS_screen",
         "Components": [
           {
             "Type": "Box",
-            "Color": {
-              "Red": 0,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
             "Name": "box1",
-            "X": 0,
-            "Y": 0,
             "Width": 272,
             "Height": 480,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Color": {
+              "Green": 255,
+              "Blue": 255
+            }
           },
           {
             "Type": "Box",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
             "Name": "box2",
             "X": 10,
             "Y": 18,
             "Width": 252,
             "Height": 375,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
           },
           {
             "Type": "ButtonWithLabel",
+            "Name": "backButtonFatFS",
+            "X": 53,
+            "Y": 405,
+            "Width": 170,
+            "Height": 60,
             "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
             "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId18",
+            "TextId": "__SingleUse_S4S0",
             "ReleasedColor": {
               "Red": 255,
               "Green": 255,
@@ -1092,84 +760,51 @@
               "Green": 255,
               "Blue": 255
             },
-            "TextRotation": "0",
-            "Name": "backButtonFatFS",
-            "X": 53,
-            "Y": 405,
-            "Width": 170,
-            "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextRotation": "0"
           },
           {
-            "Components": [],
             "Type": "ScrollableContainer",
-            "HorizontalScrollEnabled": false,
-            "VerticalScrollEnabled": true,
-            "ScrollbarsVisible": true,
-            "ScrollbarsVisibleOnPressed": true,
-            "ScrollbarsColor": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "ScrollbarsAlpha": 255,
             "Name": "fileListScrollContainer",
             "X": 10,
             "Y": 18,
             "Width": 252,
             "Height": 375,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisible": true,
+            "ScrollbarsVisibleOnPressed": true,
+            "ScrollbarsAlpha": 255,
+            "Components": []
           },
           {
-            "Components": [],
             "Type": "ModalWindow",
+            "Name": "modalWindow",
+            "Width": 272,
+            "Height": 480,
+            "Visible": false,
             "FileName": "Modal_window.png",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
             "ModalX": 40,
             "ModalY": 165,
             "ModalWidth": 192,
             "ModalHeight": 144,
-            "ContX": 0,
-            "ContY": 0,
             "Alpha": 150,
-            "Name": "modalWindow",
-            "X": 0,
-            "Y": 0,
-            "Width": 272,
-            "Height": 480,
-            "Visible": false,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Components": []
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "closeModalWndButton",
+            "X": 102,
+            "Y": 269,
+            "Width": 68,
+            "Height": 28,
+            "Visible": false,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
             "ButtonStyles": [
               {
                 "Type": "TextButtonStyle",
-                "X": 0,
                 "Y": 3,
-                "TextId": "SingleUseId51",
+                "TextId": "__SingleUse_G8XN",
                 "TextRotation": "0",
                 "ColorReleased": {
                   "Red": 10,
@@ -1184,8 +819,6 @@
               },
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
                 "Width": 68,
                 "Height": 28,
                 "LockToFlexButtonSize": true,
@@ -1201,7 +834,6 @@
                   "Blue": 102
                 },
                 "ColorBorderReleased": {
-                  "Red": 0,
                   "Green": 51,
                   "Blue": 102
                 },
@@ -1211,52 +843,27 @@
                   "Blue": 153
                 }
               }
-            ],
-            "Name": "closeModalWndButton",
-            "X": 102,
-            "Y": 269,
-            "Width": 68,
-            "Height": 28,
-            "Visible": false,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId52",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": true,
-              "BufferSize": 20
-            },
             "Name": "modalWindowMessageText",
             "X": 121,
             "Y": 234,
-            "Width": 0,
             "Height": 20,
             "Visible": false,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_FWDE",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
           }
         ],
         "Interactions": [
           {
             "InteractionName": "backButtonFSPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "backButtonFatFS"
@@ -1268,7 +875,6 @@
           },
           {
             "InteractionName": "startTestFatFSAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerScreenEntered"
             },
@@ -1279,7 +885,6 @@
           },
           {
             "InteractionName": "closeModelWindowAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "closeModalWndButton"
@@ -1289,39 +894,31 @@
               "FunctionName": "closeModalWindow"
             }
           }
-        ],
-        "Name": "testFatFS_screen",
-        "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 0
+        ]
       },
       {
+        "Name": "playAudioFile",
         "Components": [
           {
             "Type": "Box",
-            "Color": {
-              "Red": 0,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
             "Name": "box1",
-            "X": 0,
-            "Y": 0,
             "Width": 272,
             "Height": 480,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Color": {
+              "Green": 255,
+              "Blue": 255
+            }
           },
           {
             "Type": "ButtonWithLabel",
+            "Name": "backButton",
+            "X": 51,
+            "Y": 405,
+            "Width": 170,
+            "Height": 60,
             "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
             "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId30",
+            "TextId": "__SingleUse_OCR8",
             "ReleasedColor": {
               "Red": 255,
               "Green": 255,
@@ -1332,22 +929,15 @@
               "Green": 255,
               "Blue": 255
             },
-            "TextRotation": "0",
-            "Name": "backButton",
-            "X": 51,
-            "Y": 405,
-            "Width": 170,
-            "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextRotation": "0"
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "playControlButton",
+            "X": 106,
+            "Y": 310,
+            "Width": 60,
+            "Height": 60,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -1361,29 +951,19 @@
               },
               {
                 "Type": "ImageButtonStyle",
-                "X": 0,
-                "Y": 0,
-                "LockFlexButtonToImageSize": false,
                 "Style": "Style1",
                 "ImageReleased": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
                 "ImagePressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png"
               }
-            ],
-            "Name": "playControlButton",
-            "X": 106,
-            "Y": 310,
-            "Width": 60,
-            "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "nextButton",
+            "X": 178,
+            "Y": 310,
+            "Width": 60,
+            "Height": 60,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -1397,29 +977,19 @@
               },
               {
                 "Type": "ImageButtonStyle",
-                "X": 0,
-                "Y": 0,
-                "LockFlexButtonToImageSize": false,
                 "Style": "Style1",
                 "ImageReleased": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
                 "ImagePressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png"
               }
-            ],
-            "Name": "nextButton",
-            "X": 178,
-            "Y": 310,
-            "Width": 60,
-            "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "prevButton",
+            "X": 34,
+            "Y": 310,
+            "Width": 60,
+            "Height": 60,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -1433,60 +1003,43 @@
               },
               {
                 "Type": "ImageButtonStyle",
-                "X": 0,
-                "Y": 0,
-                "LockFlexButtonToImageSize": false,
                 "Style": "Style1",
                 "ImageReleased": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
                 "ImagePressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png"
               }
-            ],
-            "Name": "prevButton",
-            "X": 34,
-            "Y": 310,
-            "Width": 60,
-            "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "flexButton1",
+            "X": 188,
+            "Y": 81,
+            "Width": 50,
+            "Height": 50,
+            "Visible": false,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
             "ButtonStyles": [
               {
                 "Type": "IconButtonStyle",
-                "X": 0,
-                "Y": 0,
-                "IconReleased": "__designer\\Dark_Icons_Pause_32.png",
-                "IconPressed": ""
+                "IconReleased": "__designer\\Dark_Icons_Pause_32.png"
               },
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
                 "Width": 50,
                 "Height": 50,
                 "LockToFlexButtonSize": true,
                 "BorderSize": 5,
                 "ColorReleased": {
-                  "Red": 0,
                   "Green": 102,
                   "Blue": 153
                 },
                 "ColorPressed": {
-                  "Red": 0,
                   "Green": 153,
                   "Blue": 204
                 },
                 "ColorBorderReleased": {
-                  "Red": 0,
                   "Green": 51,
                   "Blue": 102
                 },
@@ -1496,99 +1049,58 @@
                   "Blue": 153
                 }
               }
-            ],
-            "Name": "flexButton1",
-            "X": 188,
-            "Y": 81,
-            "Width": 50,
-            "Height": 50,
-            "Visible": false,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId34",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": true,
-              "BufferSize": 20
-            },
             "Name": "fileName",
             "X": 81,
             "Y": 209,
-            "Width": 0,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_3PE2",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
           },
           {
             "Type": "Slider",
+            "Name": "volumeSlider",
+            "X": 49,
+            "Y": 87,
+            "Width": 179,
+            "Height": 34,
             "IsHorizontalSlider": true,
             "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_fill.png",
             "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_back.png",
             "Indicator": "__designer\\Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.png",
             "BackgroundX": 3,
             "BackgroundY": 7,
-            "IndicatorPos": 0,
             "IndicatorMax": 125,
-            "IndicatorMin": 0,
             "ValueMax": 254,
             "ValueMin": 170,
-            "InitValue": 240,
-            "Name": "volumeSlider",
-            "X": 49,
-            "Y": 87,
-            "Width": 179,
-            "Height": 34,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "InitValue": 240
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId35",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea1",
             "X": 101,
             "Y": 56,
             "Width": 74,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_U57E",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "Slider",
+            "Name": "playingFileProgress",
+            "X": 34,
+            "Y": 251,
+            "Width": 206,
+            "Height": 24,
             "IsHorizontalSlider": true,
             "BackgroundUnselected": "slider_background.png",
             "BackgroundSelected": "slider_filled.png",
@@ -1597,99 +1109,56 @@
             "BackgroundY": 7,
             "IndicatorPos": 1,
             "IndicatorMax": 183,
-            "IndicatorMin": 0,
-            "ValueMax": 100,
-            "ValueMin": 0,
-            "InitValue": 0,
-            "Name": "playingFileProgress",
-            "X": 34,
-            "Y": 251,
-            "Width": 206,
-            "Height": 24,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "ValueMax": 100
           },
           {
-            "Components": [],
             "Type": "Container",
-            "IsCacheableContainer": false,
             "Name": "playTimeContainer",
             "X": 34,
             "Y": 275,
             "Width": 206,
             "Height": 28,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Components": []
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId36",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "TextId": "SingleUseId37",
-              "UseBuffer": true,
-              "BufferSize": 10
-            },
             "Name": "playingTimeText",
             "X": 33,
             "Y": 279,
             "Width": 36,
             "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_BA90",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_J9EA",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId38",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "TextId": "SingleUseId39",
-              "UseBuffer": true,
-              "BufferSize": 10
-            },
             "Name": "fileDurationText",
             "X": 204,
             "Y": 279,
             "Width": 36,
             "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_YX63",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_F9PB",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "playingSettingsButton",
+            "X": 208,
+            "Y": 22,
+            "Width": 40,
+            "Height": 40,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -1703,24 +1172,18 @@
               },
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
                 "Width": 40,
                 "Height": 40,
                 "LockToFlexButtonSize": true,
-                "BorderSize": 0,
                 "ColorReleased": {
-                  "Red": 0,
                   "Green": 255,
                   "Blue": 255
                 },
                 "ColorPressed": {
-                  "Red": 0,
                   "Green": 153,
                   "Blue": 204
                 },
                 "ColorBorderReleased": {
-                  "Red": 0,
                   "Green": 51,
                   "Blue": 102
                 },
@@ -1730,49 +1193,21 @@
                   "Blue": 153
                 }
               }
-            ],
-            "Name": "playingSettingsButton",
-            "X": 208,
-            "Y": 22,
-            "Width": 40,
-            "Height": 40,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           },
           {
-            "Components": [],
             "Type": "ModalWindow",
-            "FileName": "",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "ModalX": 36,
-            "ModalY": 140,
-            "ModalWidth": 0,
-            "ModalHeight": 0,
-            "ContX": 0,
-            "ContY": 0,
-            "Alpha": 150,
             "Name": "modalWindow",
-            "X": 0,
-            "Y": 0,
             "Width": 272,
             "Height": 480,
             "Visible": false,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "FileName": "",
+            "ModalX": 36,
+            "ModalY": 140,
+            "Alpha": 150,
+            "Components": []
           },
           {
-            "CustomContainerDefinitionName": "playerSettings",
             "Type": "CustomContainerInstance",
             "Name": "playerSettingsWnd",
             "X": 11,
@@ -1780,24 +1215,24 @@
             "Width": 250,
             "Height": 400,
             "Visible": false,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "CustomContainerDefinitionName": "playerSettings"
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "closeModalWindowButton",
+            "X": 90,
+            "Y": 390,
+            "Width": 93,
+            "Height": 27,
+            "Visible": false,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
             "ButtonStyles": [
               {
                 "Type": "TextButtonStyle",
-                "X": 0,
                 "Y": 3,
-                "TextId": "SingleUseId66",
+                "TextId": "__SingleUse_2U0V",
                 "TextRotation": "0",
                 "ColorReleased": {
                   "Red": 10,
@@ -1812,8 +1247,6 @@
               },
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
                 "Width": 93,
                 "Height": 27,
                 "LockToFlexButtonSize": true,
@@ -1829,7 +1262,6 @@
                   "Blue": 102
                 },
                 "ColorBorderReleased": {
-                  "Red": 0,
                   "Green": 51,
                   "Blue": 102
                 },
@@ -1839,24 +1271,12 @@
                   "Blue": 153
                 }
               }
-            ],
-            "Name": "closeModalWindowButton",
-            "X": 90,
-            "Y": 390,
-            "Width": 93,
-            "Height": 27,
-            "Visible": false,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           }
         ],
         "Interactions": [
           {
             "InteractionName": "onPlayCtrlBtnPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "playControlButton"
@@ -1868,7 +1288,6 @@
           },
           {
             "InteractionName": "onBackButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "backButton"
@@ -1880,7 +1299,6 @@
           },
           {
             "InteractionName": "stubAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerNone"
             },
@@ -1892,7 +1310,6 @@
           },
           {
             "InteractionName": "onPrevButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "prevButton"
@@ -1904,7 +1321,6 @@
           },
           {
             "InteractionName": "onNextButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "nextButton"
@@ -1916,7 +1332,6 @@
           },
           {
             "InteractionName": "volumeSliderValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerSliderValueChanged",
               "TriggerComponent": "volumeSlider"
@@ -1928,7 +1343,6 @@
           },
           {
             "InteractionName": "onFileProgressValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerSliderValueConfirmed",
               "TriggerComponent": "playingFileProgress"
@@ -1940,7 +1354,6 @@
           },
           {
             "InteractionName": "onFileProgressChangeInitedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerSliderValueStartedChange",
               "TriggerComponent": "playingFileProgress"
@@ -1952,7 +1365,6 @@
           },
           {
             "InteractionName": "playSettingButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "playingSettingsButton"
@@ -1964,7 +1376,6 @@
           },
           {
             "InteractionName": "closeModalWindowButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "closeModalWindowButton"
@@ -1974,177 +1385,104 @@
               "FunctionName": "closeModalWindowButtonPressed"
             }
           }
-        ],
-        "Name": "playAudioFile",
-        "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 0
+        ]
       },
       {
+        "Name": "soundRecord",
         "Components": [
           {
             "Type": "Box",
-            "Color": {
-              "Red": 0,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
             "Name": "box1",
-            "X": 0,
-            "Y": 0,
             "Width": 272,
             "Height": 480,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Color": {
+              "Green": 255,
+              "Blue": 255
+            }
           },
           {
             "Type": "Box",
-            "Color": {
-              "Red": 0,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
             "Name": "box2",
-            "X": 0,
             "Y": 300,
             "Width": 272,
             "Height": 38,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Color": {
+              "Green": 255,
+              "Blue": 255
+            }
           },
           {
             "Type": "RadioButton",
-            "Alpha": 255,
-            "Selected": true,
-            "Deselectable": false,
-            "FileNameSelected": "__designer\\Blue_Radio_buttons_Radio_Round_button_active.png",
-            "FileNameSelectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_normal.png",
-            "FileNameUnselected": "__designer\\Blue_Radio_buttons_Radio_Round_button_inactive.png",
-            "FileNameUnselectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_pressed.png",
-            "Style": "Style3",
-            "RadioButtonGroup": "radioButtonGroup1",
             "Name": "micRadioButton",
             "X": 48,
             "Y": 47,
             "Width": 44,
             "Height": 44,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Selected": true,
+            "FileNameSelected": "__designer\\Blue_Radio_buttons_Radio_Round_button_active.png",
+            "FileNameSelectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_normal.png",
+            "FileNameUnselected": "__designer\\Blue_Radio_buttons_Radio_Round_button_inactive.png",
+            "FileNameUnselectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_pressed.png",
+            "RadioButtonGroup": "radioButtonGroup1",
+            "Style": "Style3"
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId41",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea1",
             "X": 70,
             "Y": 9,
             "Width": 135,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_R9QM",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId42",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea2",
             "X": 92,
             "Y": 57,
             "Width": 26,
             "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_TV2F",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "RadioButton",
-            "Alpha": 255,
-            "Selected": false,
-            "Deselectable": false,
-            "FileNameSelected": "__designer\\Blue_Radio_buttons_Radio_Round_button_active.png",
-            "FileNameSelectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_normal.png",
-            "FileNameUnselected": "__designer\\Blue_Radio_buttons_Radio_Round_button_inactive.png",
-            "FileNameUnselectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_pressed.png",
-            "Style": "Style3",
-            "RadioButtonGroup": "radioButtonGroup1",
             "Name": "lineRadioButton",
             "X": 147,
             "Y": 47,
             "Width": 44,
             "Height": 44,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "FileNameSelected": "__designer\\Blue_Radio_buttons_Radio_Round_button_active.png",
+            "FileNameSelectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_normal.png",
+            "FileNameUnselected": "__designer\\Blue_Radio_buttons_Radio_Round_button_inactive.png",
+            "FileNameUnselectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_pressed.png",
+            "RadioButtonGroup": "radioButtonGroup1",
+            "Style": "Style3"
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId43",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea3",
             "X": 191,
             "Y": 57,
             "Width": 33,
             "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_MLSJ",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "ButtonWithLabel",
+            "Name": "backButton",
+            "X": 56,
+            "Y": 405,
+            "Width": 170,
+            "Height": 60,
             "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
             "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId44",
+            "TextId": "__SingleUse_ZBZS",
             "ReleasedColor": {
               "Red": 255,
               "Green": 255,
@@ -2155,22 +1493,15 @@
               "Green": 255,
               "Blue": 255
             },
-            "TextRotation": "0",
-            "Name": "backButton",
-            "X": 56,
-            "Y": 405,
-            "Width": 170,
-            "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextRotation": "0"
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "stopRecordButton",
+            "X": 157,
+            "Y": 338,
+            "Width": 61,
+            "Height": 60,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -2184,29 +1515,19 @@
               },
               {
                 "Type": "ImageButtonStyle",
-                "X": 0,
-                "Y": 0,
-                "LockFlexButtonToImageSize": false,
                 "Style": "Style1",
                 "ImageReleased": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
                 "ImagePressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png"
               }
-            ],
-            "Name": "stopRecordButton",
-            "X": 157,
-            "Y": 338,
-            "Width": 61,
-            "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "recordCtrlButton",
+            "X": 56,
+            "Y": 338,
+            "Width": 60,
+            "Height": 60,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -2220,187 +1541,98 @@
               },
               {
                 "Type": "ImageButtonStyle",
-                "X": 0,
-                "Y": 0,
-                "LockFlexButtonToImageSize": false,
                 "Style": "Style1",
                 "ImageReleased": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
                 "ImagePressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png"
               }
-            ],
-            "Name": "recordCtrlButton",
-            "X": 56,
-            "Y": 338,
-            "Width": 60,
-            "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId45",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": true,
-              "BufferSize": 24
-            },
             "Name": "recordStatusText",
             "X": 90,
             "Y": 307,
-            "Width": 0,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_BNDT",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 24
+            }
           },
           {
             "Type": "Slider",
+            "Name": "monitoringVolumeSlider",
+            "X": 52,
+            "Y": 128,
+            "Width": 179,
+            "Height": 34,
             "IsHorizontalSlider": true,
             "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_fill.png",
             "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_back.png",
             "Indicator": "__designer\\Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.png",
             "BackgroundX": 3,
             "BackgroundY": 7,
-            "IndicatorPos": 0,
             "IndicatorMax": 125,
-            "IndicatorMin": 0,
             "ValueMax": 168,
-            "ValueMin": 0,
-            "InitValue": 84,
-            "Name": "monitoringVolumeSlider",
-            "X": 52,
-            "Y": 128,
-            "Width": 179,
-            "Height": 34,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "InitValue": 84
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId46",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea4",
             "X": 48,
             "Y": 97,
             "Width": 187,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_ZRB0",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId47",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea5",
             "X": 100,
             "Y": 170,
             "Width": 82,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_FX34",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
-            "CustomContainerDefinitionName": "numPicker",
             "Type": "CustomContainerInstance",
             "Name": "micGainPicker",
             "X": 73,
             "Y": 195,
             "Width": 130,
             "Height": 35,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "CustomContainerDefinitionName": "numPicker"
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId49",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea6",
             "X": 41,
             "Y": 240,
             "Width": 200,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_PGXB",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
-            "CustomContainerDefinitionName": "numPicker",
             "Type": "CustomContainerInstance",
             "Name": "samplingFreqPicker",
             "X": 73,
             "Y": 265,
             "Width": 130,
             "Height": 35,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "CustomContainerDefinitionName": "numPicker"
           }
         ],
         "Interactions": [
           {
             "InteractionName": "micRadioButtonSelectedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerRadioButtonSelected",
               "TriggerComponent": "micRadioButton"
@@ -2412,7 +1644,6 @@
           },
           {
             "InteractionName": "lineRadioButtonSelectedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerRadioButtonSelected",
               "TriggerComponent": "lineRadioButton"
@@ -2424,7 +1655,6 @@
           },
           {
             "InteractionName": "backButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "backButton"
@@ -2436,7 +1666,6 @@
           },
           {
             "InteractionName": "recordCtrlButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "recordCtrlButton"
@@ -2448,7 +1677,6 @@
           },
           {
             "InteractionName": "stopButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "stopRecordButton"
@@ -2460,7 +1688,6 @@
           },
           {
             "InteractionName": "monitoringSliderValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerSliderValueChanged",
               "TriggerComponent": "monitoringVolumeSlider"
@@ -2472,7 +1699,6 @@
           },
           {
             "InteractionName": "micGainPickerValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerCustom",
               "TriggerCustomTypeName": "numPicker pickerValueChanged happens",
@@ -2485,7 +1711,6 @@
           },
           {
             "InteractionName": "sampleFreqGainPickerValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerCustom",
               "TriggerCustomTypeName": "numPicker pickerValueChanged happens",
@@ -2496,283 +1721,162 @@
               "FunctionName": "sampleFreqGainPickerValueChanged"
             }
           }
-        ],
-        "Name": "soundRecord",
-        "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 0
+        ]
       },
       {
+        "Name": "oscilloscope",
+        "CanvasBufferSize": 4080,
         "Components": [
           {
             "Type": "Box",
-            "Color": {
-              "Red": 0,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
             "Name": "box1",
-            "X": 0,
-            "Y": 0,
             "Width": 272,
             "Height": 91,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Color": {
+              "Green": 255,
+              "Blue": 255
+            }
           },
           {
             "Type": "Box",
+            "Name": "box2",
+            "Y": 91,
+            "Width": 272,
+            "Height": 254,
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
-            },
-            "Alpha": 255,
-            "Name": "box2",
-            "X": 0,
-            "Y": 91,
-            "Width": 272,
-            "Height": 254,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            }
           },
           {
             "Type": "DynamicGraph",
+            "Name": "dynamicGraph1",
+            "Y": 91,
+            "Width": 272,
+            "Height": 254,
             "DataSeed": 938192437,
             "NumberOfValues": 8000,
             "MaxY": 32767.0,
             "MinY": -32768.0,
             "Precision": "1",
-            "UseCustomVisibleDataPointRange": false,
-            "FirstIndex": 0,
             "LastIndex": 7999,
-            "MapDataPointIndexToCustomValue": false,
-            "XAxisOffset": 0.0,
             "XAxisScale": 1.0,
-            "InsertRandomValues": false,
-            "Alpha": 255,
-            "LabelSizeTop": 0,
-            "LabelSizeBottom": 0,
-            "LabelSizeLeft": 0,
-            "LabelSizeRight": 0,
-            "PaddingTop": 0,
-            "PaddingBottom": 0,
-            "PaddingLeft": 0,
-            "PaddingRight": 0,
             "GraphType": "GraphWrapOverwrite",
             "VerticalFrontline": {
               "Type": "GraphVerticalFrontline",
-              "Color": {
-                "Red": 0,
-                "Green": 0,
-                "Blue": 0
-              },
-              "GapLineWidth": 1,
-              "Alpha": 255
+              "GapLineWidth": 1
             },
             "GraphDrawers": [
               {
                 "Type": "LineDrawer",
                 "LineWidth": 2,
                 "Color": {
-                  "Red": 255,
-                  "Green": 0,
-                  "Blue": 0
-                },
-                "Alpha": 255
+                  "Red": 255
+                }
               }
             ],
             "XAxisGrid": {
               "Type": "GraphGrid",
-              "Color": {
-                "Red": 0,
-                "Green": 0,
-                "Blue": 0
-              },
               "Interval": 800.0,
-              "LineWidth": 1,
-              "Alpha": 255
+              "LineWidth": 1
             },
             "YAxisGrid": {
               "Type": "GraphGrid",
-              "Color": {
-                "Red": 0,
-                "Green": 0,
-                "Blue": 0
-              },
               "Interval": 6554.0,
-              "LineWidth": 1,
-              "Alpha": 255
-            },
-            "Name": "dynamicGraph1",
-            "X": 0,
-            "Y": 91,
-            "Width": 272,
-            "Height": 254,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+              "LineWidth": 1
+            }
           },
           {
             "Type": "Box",
-            "Color": {
-              "Red": 0,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
             "Name": "box3",
-            "X": 0,
             "Y": 345,
             "Width": 272,
             "Height": 135,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Color": {
+              "Green": 255,
+              "Blue": 255
+            }
           },
           {
-            "CustomContainerDefinitionName": "numPicker",
             "Type": "CustomContainerInstance",
             "Name": "xScalePicker",
             "X": 3,
             "Y": 53,
             "Width": 130,
             "Height": 35,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "CustomContainerDefinitionName": "numPicker"
           },
           {
-            "CustomContainerDefinitionName": "numPicker",
             "Type": "CustomContainerInstance",
             "Name": "yScalePicker",
             "X": 138,
             "Y": 53,
             "Width": 130,
             "Height": 35,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "CustomContainerDefinitionName": "numPicker"
           },
           {
             "Type": "RadioButton",
-            "Alpha": 255,
-            "Selected": true,
-            "Deselectable": false,
-            "FileNameSelected": "__designer\\Blue_Radio_buttons_Radio_Round_button_active.png",
-            "FileNameSelectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_normal.png",
-            "FileNameUnselected": "__designer\\Blue_Radio_buttons_Radio_Round_button_inactive.png",
-            "FileNameUnselectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_pressed.png",
-            "Style": "Style3",
-            "RadioButtonGroup": "radioButtonGroup1",
             "Name": "micRadioButton",
             "X": 32,
             "Y": 4,
             "Width": 44,
             "Height": 44,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Type": "RadioButton",
-            "Alpha": 255,
-            "Selected": false,
-            "Deselectable": false,
+            "Selected": true,
             "FileNameSelected": "__designer\\Blue_Radio_buttons_Radio_Round_button_active.png",
             "FileNameSelectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_normal.png",
             "FileNameUnselected": "__designer\\Blue_Radio_buttons_Radio_Round_button_inactive.png",
             "FileNameUnselectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_pressed.png",
-            "Style": "Style3",
             "RadioButtonGroup": "radioButtonGroup1",
+            "Style": "Style3"
+          },
+          {
+            "Type": "RadioButton",
             "Name": "lineRadioButton",
             "X": 149,
             "Y": 4,
             "Width": 44,
             "Height": 44,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "FileNameSelected": "__designer\\Blue_Radio_buttons_Radio_Round_button_active.png",
+            "FileNameSelectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_normal.png",
+            "FileNameUnselected": "__designer\\Blue_Radio_buttons_Radio_Round_button_inactive.png",
+            "FileNameUnselectedPressed": "__designer\\Blue_Radio_buttons_Radio_Round_button_pressed.png",
+            "RadioButtonGroup": "radioButtonGroup1",
+            "Style": "Style3"
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId74",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea1",
             "X": 76,
             "Y": 14,
             "Width": 33,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_VC74",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId75",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea2",
             "X": 193,
             "Y": 14,
             "Width": 41,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_SE8P",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "ButtonWithLabel",
+            "Name": "backButton",
+            "X": 56,
+            "Y": 405,
+            "Width": 170,
+            "Height": 60,
             "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
             "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId76",
+            "TextId": "__SingleUse_E40A",
             "ReleasedColor": {
               "Red": 255,
               "Green": 255,
@@ -2783,22 +1887,15 @@
               "Green": 255,
               "Blue": 255
             },
-            "TextRotation": "0",
-            "Name": "backButton",
-            "X": 56,
-            "Y": 405,
-            "Width": 170,
-            "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextRotation": "0"
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "scopeCtrlButton",
+            "X": 111,
+            "Y": 345,
+            "Width": 60,
+            "Height": 60,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -2812,31 +1909,16 @@
               },
               {
                 "Type": "ImageButtonStyle",
-                "X": 0,
-                "Y": 0,
-                "LockFlexButtonToImageSize": false,
                 "Style": "Style1",
                 "ImageReleased": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
                 "ImagePressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png"
               }
-            ],
-            "Name": "scopeCtrlButton",
-            "X": 111,
-            "Y": 345,
-            "Width": 60,
-            "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           }
         ],
         "Interactions": [
           {
             "InteractionName": "backButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "backButton"
@@ -2848,7 +1930,6 @@
           },
           {
             "InteractionName": "scopeCtrlButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "scopeCtrlButton"
@@ -2860,7 +1941,6 @@
           },
           {
             "InteractionName": "micRadioButtonSelectedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerRadioButtonSelected",
               "TriggerComponent": "micRadioButton"
@@ -2872,7 +1952,6 @@
           },
           {
             "InteractionName": "lineRadioButtonSelectedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerRadioButtonSelected",
               "TriggerComponent": "lineRadioButton"
@@ -2884,7 +1963,6 @@
           },
           {
             "InteractionName": "xScalePickerValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerCustom",
               "TriggerCustomTypeName": "numPicker pickerValueChanged happens",
@@ -2897,7 +1975,6 @@
           },
           {
             "InteractionName": "yScalePickerValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerCustom",
               "TriggerCustomTypeName": "numPicker pickerValueChanged happens",
@@ -2908,118 +1985,82 @@
               "FunctionName": "yScalePickerValueChanged"
             }
           }
-        ],
-        "Name": "oscilloscope",
-        "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 4080
+        ]
       },
       {
+        "Name": "externalStimulator",
         "Components": [
           {
             "Type": "Box",
-            "Color": {
-              "Red": 0,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
             "Name": "box1",
-            "X": 0,
-            "Y": 0,
             "Width": 272,
             "Height": 480,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Color": {
+              "Green": 255,
+              "Blue": 255
+            }
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId79",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea1",
             "X": 76,
             "Y": 20,
             "Width": 121,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_S203",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "Slider",
+            "Name": "maxVolumeSlider",
+            "X": 47,
+            "Y": 52,
+            "Width": 179,
+            "Height": 34,
             "IsHorizontalSlider": true,
             "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_fill.png",
             "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_back.png",
             "Indicator": "__designer\\Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.png",
             "BackgroundX": 3,
             "BackgroundY": 7,
-            "IndicatorPos": 0,
             "IndicatorMax": 125,
-            "IndicatorMin": 0,
             "ValueMax": 254,
             "ValueMin": 127,
-            "InitValue": 192,
-            "Name": "maxVolumeSlider",
-            "X": 47,
-            "Y": 52,
-            "Width": 179,
-            "Height": 34,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "InitValue": 192
           },
           {
             "Type": "ButtonWithLabel",
-            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
-            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId80",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0",
             "Name": "backButton",
             "X": 56,
             "Y": 405,
             "Width": 170,
             "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "TextId": "__SingleUse_A23Y",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
           },
           {
             "Type": "ButtonWithLabel",
+            "Name": "testCtrlButton",
+            "X": 56,
+            "Y": 345,
+            "Width": 170,
+            "Height": 60,
             "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
             "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId81",
+            "TextId": "__SingleUse_IKAT",
             "ReleasedColor": {
               "Red": 255,
               "Green": 255,
@@ -3031,143 +2072,79 @@
               "Blue": 255
             },
             "TextRotation": "0",
-            "Style": "Style4",
-            "Name": "testCtrlButton",
-            "X": 56,
-            "Y": 345,
-            "Width": 170,
-            "Height": 60,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Style": "Style4"
           },
           {
             "Type": "BoxProgress",
+            "Name": "testProgressBar",
+            "X": 44,
+            "Y": 136,
+            "Width": 184,
+            "Height": 20,
             "Color": {
-              "Red": 0,
               "Green": 151,
               "Blue": 255
             },
             "Direction": "Right",
-            "Alpha": 255,
             "Style": "Style3",
             "FileNameBackground": "__designer\\Blue_ProgressIndicators_bg_medium_progress_indicator_bg_square_0_degrees.png",
             "IndicatorPositionX": 2,
             "IndicatorPositionY": 2,
             "IndicatorPositionWidth": 180,
             "IndicatorPositionHeight": 16,
-            "ProgressRangeMin": 0,
-            "ProgressRangeMax": 5,
-            "ProgressRangeSteps": 0,
-            "ProgressRangeStepsMin": 0,
-            "ProgressInitialValue": 0,
-            "Name": "testProgressBar",
-            "X": 44,
-            "Y": 136,
-            "Width": 184,
-            "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "ProgressRangeMax": 5
           },
           {
             "Type": "Box",
-            "Color": {
-              "Red": 0,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
             "Name": "box2",
-            "X": 0,
             "Y": 163,
             "Width": 272,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Color": {
+              "Green": 255,
+              "Blue": 255
+            }
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId82",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": true,
-              "BufferSize": 10
-            },
             "Name": "testProgressText",
             "X": 90,
             "Y": 163,
             "Width": 99,
             "Height": 25,
             "Visible": false,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_FAA6",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
-            "CustomContainerDefinitionName": "numPicker",
             "Type": "CustomContainerInstance",
             "Name": "stimTypePicker",
             "X": 71,
             "Y": 233,
             "Width": 130,
             "Height": 35,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "CustomContainerDefinitionName": "numPicker"
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId83",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea2",
             "X": 67,
             "Y": 200,
             "Width": 139,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_Z6QO",
+            "TextRotation": "0",
+            "AutoSize": true
           }
         ],
         "Interactions": [
           {
             "InteractionName": "backButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "backButton"
@@ -3179,7 +2156,6 @@
           },
           {
             "InteractionName": "testCtrlButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "testCtrlButton"
@@ -3191,7 +2167,6 @@
           },
           {
             "InteractionName": "maxVolumeSliderValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerSliderValueChanged",
               "TriggerComponent": "maxVolumeSlider"
@@ -3203,7 +2178,6 @@
           },
           {
             "InteractionName": "stimTypePickerValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerCustom",
               "TriggerCustomTypeName": "numPicker pickerValueChanged happens",
@@ -3214,50 +2188,42 @@
               "FunctionName": "stimTypePickerValueChanged"
             }
           }
-        ],
-        "Name": "externalStimulator",
-        "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 0
+        ]
       }
     ],
     "CustomContainerDefinitions": [
       {
+        "Name": "folderItem",
+        "X": 134,
+        "Y": -32,
+        "Width": 252,
+        "Height": 30,
         "Components": [
           {
             "Type": "Box",
+            "Name": "box1",
+            "Width": 252,
+            "Height": 30,
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
-            },
-            "Alpha": 255,
-            "Name": "box1",
-            "X": 0,
-            "Y": 0,
-            "Width": 252,
-            "Height": 30,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            }
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "itemDirButton",
+            "Width": 200,
+            "Height": 30,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
             "ButtonStyles": [
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
                 "Width": 200,
                 "Height": 30,
                 "LockToFlexButtonSize": true,
-                "BorderSize": 0,
                 "ColorReleased": {
                   "Red": 255,
                   "Green": 255,
@@ -3279,68 +2245,35 @@
                   "Blue": 128
                 }
               }
-            ],
-            "Name": "itemDirButton",
-            "X": 0,
-            "Y": 0,
-            "Width": 200,
-            "Height": 30,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           },
           {
             "Type": "Image",
-            "RelativeFilename": "folder.png",
-            "Alpha": 255,
             "Name": "image1",
             "X": 6,
             "Y": 3,
             "Width": 24,
             "Height": 24,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "RelativeFilename": "folder.png"
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId22",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": true,
-              "BufferSize": 256
-            },
             "Name": "folderName",
             "X": 36,
             "Y": 5,
-            "Width": 0,
             "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_EXG0",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 256
+            }
           }
         ],
         "Interactions": [
           {
             "InteractionName": "onFolderItemClickedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "itemDirButton"
@@ -3358,50 +2291,38 @@
             "HasValue": true,
             "ValueType": "const touchgfx::Unicode::UnicodeChar*"
           }
-        ],
-        "Name": "folderItem",
-        "X": 134,
-        "Y": -32,
-        "Width": 252,
-        "Height": 30
+        ]
       },
       {
+        "Name": "fileItem",
+        "Width": 252,
+        "Height": 30,
         "Components": [
           {
             "Type": "Box",
+            "Name": "box1",
+            "Width": 252,
+            "Height": 30,
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
-            },
-            "Alpha": 255,
-            "Name": "box1",
-            "X": 0,
-            "Y": 0,
-            "Width": 252,
-            "Height": 30,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            }
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "itemFileButton",
+            "Width": 179,
+            "Height": 30,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
             "ButtonStyles": [
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
                 "Width": 179,
                 "Height": 30,
                 "LockToFlexButtonSize": true,
-                "BorderSize": 0,
                 "ColorReleased": {
                   "Red": 255,
                   "Green": 255,
@@ -3413,7 +2334,6 @@
                   "Blue": 128
                 },
                 "ColorBorderReleased": {
-                  "Red": 0,
                   "Green": 51,
                   "Blue": 102
                 },
@@ -3423,96 +2343,49 @@
                   "Blue": 153
                 }
               }
-            ],
-            "Name": "itemFileButton",
-            "X": 0,
-            "Y": 0,
-            "Width": 179,
-            "Height": 30,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           },
           {
             "Type": "Image",
-            "RelativeFilename": "file.png",
-            "Alpha": 255,
             "Name": "image1",
             "X": 2,
             "Y": 3,
             "Width": 24,
             "Height": 24,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "RelativeFilename": "file.png"
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId23",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": true,
-              "BufferSize": 256
-            },
             "Name": "fileName",
             "X": 27,
             "Y": 5,
-            "Width": 0,
             "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_TADM",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 256
+            }
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId50",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": true,
-              "BufferSize": 10
-            },
             "Name": "fileSizeText",
             "X": 179,
             "Y": 5,
-            "Width": 0,
             "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_UXHY",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           }
         ],
         "Interactions": [
           {
             "InteractionName": "onFileItemClickedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "itemFileButton"
@@ -3530,66 +2403,46 @@
             "HasValue": true,
             "ValueType": "const touchgfx::Unicode::UnicodeChar*"
           }
-        ],
-        "Name": "fileItem",
-        "X": 0,
-        "Y": 0,
-        "Width": 252,
-        "Height": 30
+        ]
       },
       {
+        "Name": "numPicker",
+        "X": -2,
+        "Y": 1,
+        "Width": 130,
+        "Height": 35,
         "Components": [
           {
             "Type": "Box",
+            "Name": "box1",
+            "X": 30,
+            "Width": 70,
+            "Height": 35,
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
-            },
-            "Alpha": 255,
-            "Name": "box1",
-            "X": 30,
-            "Y": 0,
-            "Width": 70,
-            "Height": 35,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            }
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId48",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": true,
-              "BufferSize": 10
-            },
             "Name": "pickerText",
             "X": 37,
             "Y": 5,
-            "Width": 0,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_9DRD",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "goPrevValueButton",
+            "Width": 30,
+            "Height": 35,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -3603,12 +2456,9 @@
               },
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
                 "Width": 30,
                 "Height": 35,
                 "LockToFlexButtonSize": true,
-                "BorderSize": 0,
                 "ColorReleased": {
                   "Red": 128,
                   "Green": 143,
@@ -3620,7 +2470,6 @@
                   "Blue": 102
                 },
                 "ColorBorderReleased": {
-                  "Red": 0,
                   "Green": 51,
                   "Blue": 102
                 },
@@ -3630,22 +2479,14 @@
                   "Blue": 153
                 }
               }
-            ],
-            "Name": "goPrevValueButton",
-            "X": 0,
-            "Y": 0,
-            "Width": 30,
-            "Height": 35,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           },
           {
             "Type": "FlexButton",
-            "Alpha": 255,
+            "Name": "goNextValueButton",
+            "X": 100,
+            "Width": 30,
+            "Height": 35,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -3659,12 +2500,9 @@
               },
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
                 "Width": 30,
                 "Height": 35,
                 "LockToFlexButtonSize": true,
-                "BorderSize": 0,
                 "ColorReleased": {
                   "Red": 128,
                   "Green": 143,
@@ -3686,24 +2524,12 @@
                   "Blue": 102
                 }
               }
-            ],
-            "Name": "goNextValueButton",
-            "X": 100,
-            "Y": 0,
-            "Width": 30,
-            "Height": 35,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            ]
           }
         ],
         "Interactions": [
           {
             "InteractionName": "goPrevValueButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "goPrevValueButton"
@@ -3715,7 +2541,6 @@
           },
           {
             "InteractionName": "goNextValueButtonPressedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "goNextValueButton"
@@ -3732,354 +2557,207 @@
             "HasValue": true,
             "ValueType": "uint8_t"
           }
-        ],
-        "Name": "numPicker",
-        "X": -2,
-        "Y": 1,
-        "Width": 130,
-        "Height": 35
+        ]
       },
       {
+        "Name": "playerSettings",
+        "Width": 250,
+        "Height": 400,
         "Components": [
           {
             "Type": "Box",
-            "Color": {
-              "Red": 0,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
             "Name": "box1",
-            "X": 0,
-            "Y": 0,
             "Width": 250,
             "Height": 400,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Color": {
+              "Green": 255,
+              "Blue": 255
+            }
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId55",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea1",
             "X": 104,
             "Y": 47,
             "Width": 47,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_8ZG5",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "RadioButton",
-            "Alpha": 255,
-            "Selected": false,
-            "Deselectable": true,
-            "FileNameSelected": "__designer\\Blue_PageIndicator_dot_indicator_small_highlight.png",
-            "FileNameSelectedPressed": "__designer\\Blue_PageIndicator_dot_indicator_small_highlight.png",
-            "FileNameUnselected": "__designer\\Blue_PageIndicator_dot_indicator_small_normal.png",
-            "FileNameUnselectedPressed": "__designer\\Blue_PageIndicator_dot_indicator_small_normal.png",
-            "RadioButtonGroup": "radioButtonGroup1",
             "Name": "diffRadioButton",
             "X": 38,
             "Y": 13,
             "Width": 15,
             "Height": 15,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "Deselectable": true,
+            "FileNameSelected": "__designer\\Blue_PageIndicator_dot_indicator_small_highlight.png",
+            "FileNameSelectedPressed": "__designer\\Blue_PageIndicator_dot_indicator_small_highlight.png",
+            "FileNameUnselected": "__designer\\Blue_PageIndicator_dot_indicator_small_normal.png",
+            "FileNameUnselectedPressed": "__designer\\Blue_PageIndicator_dot_indicator_small_normal.png",
+            "RadioButtonGroup": "radioButtonGroup1"
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId56",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea2",
             "X": 63,
             "Y": 10,
             "Width": 148,
             "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_28GJ",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "Slider",
-            "IsHorizontalSlider": true,
-            "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_fill.png",
-            "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_back.png",
-            "Indicator": "__designer\\Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.png",
-            "BackgroundX": 3,
-            "BackgroundY": 7,
-            "IndicatorPos": 0,
-            "IndicatorMax": 125,
-            "IndicatorMin": 0,
-            "ValueMax": 15,
-            "ValueMin": 0,
-            "InitValue": 0,
             "Name": "bassAmpSlider",
             "X": 38,
             "Y": 92,
             "Width": 179,
             "Height": 34,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_fill.png",
+            "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_back.png",
+            "Indicator": "__designer\\Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.png",
+            "BackgroundX": 3,
+            "BackgroundY": 7,
+            "IndicatorMax": 125,
+            "ValueMax": 15
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId57",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "TextId": "SingleUseId58",
-              "UseBuffer": true,
-              "BufferSize": 10
-            },
             "Name": "bassBoostText",
             "X": 70,
             "Y": 72,
             "Width": 121,
             "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_3O3T",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_OY7N",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "Slider",
-            "IsHorizontalSlider": true,
-            "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_fill.png",
-            "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_back.png",
-            "Indicator": "__designer\\Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.png",
-            "BackgroundX": 3,
-            "BackgroundY": 7,
-            "IndicatorPos": 0,
-            "IndicatorMax": 125,
-            "IndicatorMin": 0,
-            "ValueMax": 15,
-            "ValueMin": 2,
-            "InitValue": 2,
             "Name": "bassFreqSlider",
             "X": 38,
             "Y": 146,
             "Width": 179,
             "Height": 34,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_fill.png",
+            "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_back.png",
+            "Indicator": "__designer\\Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.png",
+            "BackgroundX": 3,
+            "BackgroundY": 7,
+            "IndicatorMax": 125,
+            "ValueMax": 15,
+            "ValueMin": 2,
+            "InitValue": 2
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId59",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "TextId": "SingleUseId60",
-              "UseBuffer": true,
-              "BufferSize": 10
-            },
             "Name": "bassFreqText",
             "X": 44,
             "Y": 126,
             "Width": 167,
             "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_GOM1",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_3XVT",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId61",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
             "Name": "textArea3",
             "X": 97,
             "Y": 194,
             "Width": 61,
             "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_UYUC",
+            "TextRotation": "0",
+            "AutoSize": true
           },
           {
             "Type": "Slider",
-            "IsHorizontalSlider": true,
-            "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_fill.png",
-            "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_back.png",
-            "Indicator": "__designer\\Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.png",
-            "BackgroundX": 3,
-            "BackgroundY": 7,
-            "IndicatorPos": 0,
-            "IndicatorMax": 125,
-            "IndicatorMin": 0,
-            "ValueMax": 15,
-            "ValueMin": 0,
-            "InitValue": 8,
             "Name": "trebleAmpSlider",
             "X": 40,
             "Y": 239,
             "Width": 179,
             "Height": 34,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Type": "TextArea",
-            "TextId": "SingleUseId62",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "TextId": "SingleUseId63",
-              "UseBuffer": true,
-              "BufferSize": 10
-            },
-            "Name": "trebleBoostText",
-            "X": 64,
-            "Y": 219,
-            "Width": 132,
-            "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Type": "Slider",
             "IsHorizontalSlider": true,
             "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_fill.png",
             "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_back.png",
             "Indicator": "__designer\\Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.png",
             "BackgroundX": 3,
             "BackgroundY": 7,
-            "IndicatorPos": 0,
             "IndicatorMax": 125,
-            "IndicatorMin": 0,
             "ValueMax": 15,
-            "ValueMin": 1,
-            "InitValue": 1,
+            "InitValue": 8
+          },
+          {
+            "Type": "TextArea",
+            "Name": "trebleBoostText",
+            "X": 64,
+            "Y": 219,
+            "Width": 132,
+            "Height": 20,
+            "TextId": "__SingleUse_DUZU",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_FYD5",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "Slider",
             "Name": "trebleFreqSlider",
             "X": 40,
             "Y": 293,
             "Width": 179,
             "Height": 34,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_fill.png",
+            "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Small_slider_horizontal_small_round_edge_back.png",
+            "Indicator": "__designer\\Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.png",
+            "BackgroundX": 3,
+            "BackgroundY": 7,
+            "IndicatorMax": 125,
+            "ValueMax": 15,
+            "ValueMin": 1,
+            "InitValue": 1
           },
           {
             "Type": "TextArea",
-            "TextId": "SingleUseId64",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "TextId": "SingleUseId65",
-              "UseBuffer": true,
-              "BufferSize": 10
-            },
             "Name": "trebleFreqText",
             "X": 31,
             "Y": 273,
             "Width": 188,
             "Height": 20,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
+            "TextId": "__SingleUse_QL5I",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_2OT0",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           }
         ],
         "Interactions": [
           {
             "InteractionName": "diffRadioButtonSelectedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerRadioButtonSelected",
               "TriggerComponent": "diffRadioButton"
@@ -4091,7 +2769,6 @@
           },
           {
             "InteractionName": "bassAmpSliderValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerSliderValueChanged",
               "TriggerComponent": "bassAmpSlider"
@@ -4103,7 +2780,6 @@
           },
           {
             "InteractionName": "bassFreqSliderValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerSliderValueChanged",
               "TriggerComponent": "bassFreqSlider"
@@ -4115,7 +2791,6 @@
           },
           {
             "InteractionName": "trebleAmpSliderValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerSliderValueChanged",
               "TriggerComponent": "trebleAmpSlider"
@@ -4127,7 +2802,6 @@
           },
           {
             "InteractionName": "trebleFreqSliderValueChangedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerSliderValueChanged",
               "TriggerComponent": "trebleFreqSlider"
@@ -4139,7 +2813,6 @@
           },
           {
             "InteractionName": "diffRadioButtonDeselectedAction",
-            "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerRadioButtonDeselected",
               "TriggerComponent": "diffRadioButton"
@@ -4156,302 +2829,7 @@
             "HasValue": true,
             "ValueType": "uint16_t*"
           }
-        ],
-        "Name": "playerSettings",
-        "X": 0,
-        "Y": 0,
-        "Width": 250,
-        "Height": 400
-      }
-    ],
-    "TextEntries": [
-      {
-        "TextEntryId": "SingleUseId1",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId2",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId9",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId10",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId13",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId14",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId15",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId16",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "codecStartTestBtnLabel",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "codecStopTestBtnLabel",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "testFatFS_unmountError",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "SingleUseId22",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId23",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "ResourceId1",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "SingleUseId18",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId26",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "SingleUseId27",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "SingleUseId28",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "playBtnLabel",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "playCancelBthLabel",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "SingleUseId30",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId34",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId35",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "ResourceId2",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "codecStartPCMTestBth",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "codecStopPCMTestBth",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "SingleUseId36",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId37",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId38",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId39",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId40",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId41",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId42",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId43",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId44",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId45",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId46",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId47",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId48",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId49",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId50",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId51",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId52",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId53",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId54",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId55",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId56",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId57",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId58",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId59",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId60",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId61",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId62",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId63",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId64",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId65",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId66",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId67",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId68",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId69",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId70",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId71",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId74",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId75",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId76",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId77",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId78",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId79",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId80",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId81",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId82",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId83",
-        "IsResource": false
+        ]
       }
     ],
     "Name": "STM32F4_LCD",
@@ -4500,5 +2878,5 @@
     "DisplayOrientation": "Portrait",
     "Family": "STM32F4"
   },
-  "Version": "4.15.0"
+  "Version": "4.18.0"
 }

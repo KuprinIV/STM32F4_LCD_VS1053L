@@ -1,28 +1,25 @@
-/**
-  ******************************************************************************
-  * This file is part of the TouchGFX 4.15.0 distribution.
-  *
-  * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under Ultimate Liberty license
-  * SLA0044, the "License"; You may not use this file except in compliance with
-  * the License. You may obtain a copy of the License at:
-  *                             www.st.com/SLA0044
-  *
-  ******************************************************************************
-  */
+/******************************************************************************
+* Copyright (c) 2018(-2021) STMicroelectronics.
+* All rights reserved.
+*
+* This file is part of the TouchGFX 4.18.0 distribution.
+*
+* This software is licensed under terms that can be found in the LICENSE file in
+* the root directory of this software component.
+* If no LICENSE file comes with this software, it is provided AS-IS.
+*
+*******************************************************************************/
 
 /**
  * @file touchgfx/widgets/canvas/AbstractPainterARGB8888.hpp
  *
  * Declares the touchgfx::AbstractPainterARGB8888 class.
  */
-#ifndef ABSTRACTPAINTERARGB8888_HPP
-#define ABSTRACTPAINTERARGB8888_HPP
+#ifndef TOUCHGFX_ABSTRACTPAINTERARGB8888_HPP
+#define TOUCHGFX_ABSTRACTPAINTERARGB8888_HPP
 
-#include <assert.h>
-#include <touchgfx/hal/HAL.hpp>
+#include <touchgfx/hal/Types.hpp>
+#include <touchgfx/Bitmap.hpp>
 #include <touchgfx/lcd/LCD.hpp>
 #include <touchgfx/widgets/canvas/AbstractPainter.hpp>
 
@@ -57,7 +54,10 @@ protected:
     /**
      * @copydoc AbstractPainterABGR2222::renderNext(uint8_t&,uint8_t&,uint8_t&,uint8_t&)
      */
-    virtual bool renderNext(uint8_t& red, uint8_t& green, uint8_t& blue, uint8_t& alpha) = 0;
+    virtual bool renderNext(uint8_t& red, uint8_t& green, uint8_t& blue, uint8_t& alpha)
+    {
+        return false;
+    }
 
     /**
      * @copydoc AbstractPainterABGR2222::renderPixel(uint8_t*,uint8_t,uint8_t,uint8_t)
@@ -81,4 +81,4 @@ protected:
 
 } // namespace touchgfx
 
-#endif // ABSTRACTPAINTERARGB8888_HPP
+#endif // TOUCHGFX_ABSTRACTPAINTERARGB8888_HPP

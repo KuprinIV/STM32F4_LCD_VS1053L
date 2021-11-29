@@ -1,16 +1,13 @@
-##############################################################################
-# This file is part of the TouchGFX 4.15.0 distribution.
+# Copyright (c) 2018(-2021) STMicroelectronics.
+# All rights reserved.
 #
-# <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
-# All rights reserved.</center></h2>
+# This file is part of the TouchGFX 4.18.0 distribution.
 #
-# This software component is licensed by ST under Ultimate Liberty license
-# SLA0044, the "License"; You may not use this file except in compliance with
-# the License. You may obtain a copy of the License at:
-#                             www.st.com/SLA0044
+# This software is licensed under terms that can be found in the LICENSE file in
+# the root directory of this software component.
+# If no LICENSE file comes with this software, it is provided AS-IS.
 #
-##############################################################################
-
+###############################################################################/
 class TextEntries
   include Enumerable
 
@@ -68,6 +65,14 @@ class TextEntries
     @entries.select { |entry| entry.typography == typography }
   end
 
+  def text_id(text_id)
+    @entries.find { |entry| entry.text_id == text_id }
+  end
+
+  def all_text_ids
+    @entries.collect { |entry| entry.text_id }
+  end
+
   def include?(text_entry)
     @entries.find { |entry| entry.text_id == text_entry.text_id || entry.cpp_text_id == text_entry.cpp_text_id }
   end
@@ -79,7 +84,6 @@ class TextEntries
   def is_rtl
     @unicode_is_rtl || @entries.any? { |entry| entry.is_rtl }
   end
-
 end
 
 class TextEntry
@@ -229,6 +233,7 @@ class TextEntry
 end
 
 class Translation
+  attr_reader :text
   def initialize(text)
     @text = text
   end
@@ -242,9 +247,10 @@ class Translation
     to_cpp.count("\2")
   end
   def unicodes
+    # Collect all unicodes and add a terminating zero, which is also part of the string
     @unicodes ||=
       begin
-        numbers.map { |number| number.to_s.gsub(/\[|\]/,'').to_i }
+        numbers.map { |number| number.to_s.gsub(/\[|\]/,'').to_i } + [0]
       end
   end
   def to_cpp
@@ -260,7 +266,6 @@ class Translation
     to_cpp.unpack('U*')
   end
 end
-
 
 class String
   def to_ascii
