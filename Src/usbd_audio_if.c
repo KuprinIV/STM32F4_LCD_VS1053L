@@ -161,8 +161,8 @@ static int8_t AUDIO_Init_FS(uint32_t AudioFreq, uint32_t Volume, uint32_t option
 	UNUSED(options);
 	writeCommandRegister(CLOCKF_REG, 0x9800);
 	// init speaker
-	writeData(WAV_header_48kHz_16bit_stereo, sizeof(WAV_header_48kHz_16bit_stereo));
 	setVolume(current_volume, current_volume);
+	writeData(WAV_header_48kHz_16bit_stereo, sizeof(WAV_header_48kHz_16bit_stereo));
 
 	// init mic
 //	startRecording(&mic_params);

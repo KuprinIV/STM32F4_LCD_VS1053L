@@ -17,4 +17,4 @@
 .settings/
 Src/build
 Src/Simulator
-Debug/
+Debug
