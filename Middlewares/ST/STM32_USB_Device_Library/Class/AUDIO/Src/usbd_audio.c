@@ -638,13 +638,11 @@ static uint8_t USBD_AUDIO_Setup(USBD_HandleTypeDef *pdev,
                 {
                   if (haudio->in_packet_buffer_enable == 0)
                   {
-                	GPIOA->BSRR = GPIO_PIN_1;
                     haudio->in_packet_buffer_enable = 2U;
                   }
                 }
                 else if(haudio->alt_settings[AUDIO_IN_IF] == 0)
                 {
-                  GPIOA->BSRR = GPIO_PIN_1<<16;
                   haudio->in_packet_buffer_enable = 0U;
                   USBD_LL_FlushEP (pdev, AUDIO_IN_EP);
                 }
@@ -717,8 +715,11 @@ static uint8_t USBD_AUDIO_DataIn(USBD_HandleTypeDef *pdev, uint8_t epnum)
   if (epnum == (AUDIO_IN_EP & 0x7F))
   {
 		((USBD_AUDIO_ItfTypeDef *) pdev->pUserData)->MicSendData(haudio->in_packet_buffer, &packet_size);
-		USBD_LL_FlushEP (pdev, AUDIO_IN_EP);
-		USBD_LL_Transmit (pdev, AUDIO_IN_EP, haudio->in_packet_buffer, (packet_size <= AUDIO_IN_PACKET) ? packet_size : AUDIO_IN_PACKET);
+		if(packet_size > 0)
+		{
+			USBD_LL_FlushEP (pdev, AUDIO_IN_EP);
+			USBD_LL_Transmit (pdev, AUDIO_IN_EP, haudio->in_packet_buffer, (packet_size <= AUDIO_IN_PACKET) ? packet_size : AUDIO_IN_PACKET);
+		}
   }
   /* Only OUT data are processed */
   return (uint8_t)USBD_OK;
@@ -788,10 +789,13 @@ static uint8_t USBD_AUDIO_SOF(USBD_HandleTypeDef *pdev)
   if (haudio->in_packet_buffer_enable == 2)
   {
 	((USBD_AUDIO_ItfTypeDef *) pdev->pUserData)->MicSendData(haudio->in_packet_buffer, &packet_size);
-	haudio->in_packet_buffer_enable = 1U;
 
-	USBD_LL_FlushEP (pdev, AUDIO_IN_EP);
-	USBD_LL_Transmit (pdev, AUDIO_IN_EP, haudio->in_packet_buffer, (packet_size <= AUDIO_IN_PACKET) ? packet_size : AUDIO_IN_PACKET);
+	if(packet_size > 0)
+	{
+		USBD_LL_FlushEP (pdev, AUDIO_IN_EP);
+		USBD_LL_Transmit (pdev, AUDIO_IN_EP, haudio->in_packet_buffer, (packet_size <= AUDIO_IN_PACKET) ? packet_size : AUDIO_IN_PACKET);
+		haudio->in_packet_buffer_enable = 1U;
+	}
   }
   return (uint8_t)USBD_OK;
 }

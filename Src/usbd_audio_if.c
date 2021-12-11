@@ -28,13 +28,15 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
+#define DEBUG_MIC 0 // 0 - no debug, 1 - debug sine 1 kHz
+#define USB_CODEC_MODE 0 // 0 - speaker, 1 - mic
 /* Private macro -------------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 uint8_t current_volume = 5;
 extern uint8_t WAV_header_48kHz_16bit_stereo[44];
-recordingParams mic_params = {48000, 1024, 2048, 2, 1}; // 48 kHz, mic gain 1, max auto gain 2, input is mic, linear PCM
+recordingParams mic_params = {48000, 0, 1024, 2, 1}; // 48 kHz, mic gain 1, max auto gain 2, input is mic, linear PCM
 /* USER CODE END PV */
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
@@ -106,7 +108,10 @@ recordingParams mic_params = {48000, 1024, 2048, 2, 1}; // 48 kHz, mic gain 1, m
 extern USBD_HandleTypeDef hUsbDeviceFS;
 
 /* USER CODE BEGIN EXPORTED_VARIABLES */
-
+uint16_t sinebuf[48] = {0, 4276, 8480,  12539,  16383, 19946, 23169, 25995, 28376, 30271, 31649, 32485, 32766,
+32485, 31649, 30271, 28376, 25995, 23169, 19946, 16383, 12539, 8480, 4276, 0,
+61259, 57055, 52996, 49153, 45589, 42366, 39540, 37159, 35264, 33886, 33050, 32770,
+33050, 33886, 35264, 37159, 39540, 42366, 45589, 49152, 52996, 57055, 61259};
 /* USER CODE END EXPORTED_VARIABLES */
 
 /**
@@ -159,14 +164,22 @@ static int8_t AUDIO_Init_FS(uint32_t AudioFreq, uint32_t Volume, uint32_t option
 {
   /* USER CODE BEGIN 0 */
 	UNUSED(options);
-	writeCommandRegister(CLOCKF_REG, 0x9800);
-	// init speaker
-	setVolume(current_volume, current_volume);
-	writeData(WAV_header_48kHz_16bit_stereo, sizeof(WAV_header_48kHz_16bit_stereo));
+    codecHardwareReset();
 
-	// init mic
-//	startRecording(&mic_params);
-//	setMonitoringVolume(0x01); // set monitoring volume -84 dB
+    if(!USB_CODEC_MODE)
+    {
+		// init speaker
+		writeCommandRegister(CLOCKF_REG, 0x9800);
+		setVolume(current_volume, current_volume);
+		writeData(WAV_header_48kHz_16bit_stereo, sizeof(WAV_header_48kHz_16bit_stereo));
+    }
+    else
+    {
+		// init mic
+		selectInput(0);
+		startRecording(&mic_params);
+		setMonitoringVolume(0x0E); // set monitoring volume -84 dB
+    }
   return (USBD_OK);
   /* USER CODE END 0 */
 }
@@ -180,11 +193,17 @@ static int8_t AUDIO_DeInit_FS(uint32_t options)
 {
   /* USER CODE BEGIN 1 */
   UNUSED(options);
-  // stop recording
-  stopRecording();
-  // set SM_CANCEL bit
-  writeCommandRegister(MODE_REG, 0x4808);
-  setVolume(254, 254);
+  if(!USB_CODEC_MODE)
+  {
+	  // set SM_CANCEL bit
+	  writeCommandRegister(MODE_REG, 0x4808);
+	  setVolume(254, 254);
+  }
+  else
+  {
+	  // stop recording
+	  stopRecording();
+  }
   return (USBD_OK);
   /* USER CODE END 1 */
 }
@@ -299,14 +318,37 @@ void HalfTransfer_CallBack_FS(void)
 static int8_t AUDIO_MicSendData(uint8_t* in_packet_buffer, uint16_t* size)
 {
 	uint16_t hdat0 = 0, hdat1 = 0;
-
 	// read mic data from codec
-	hdat1 = readCommandRegister(HDAT1_REG); // read number of samples
-	*size = hdat1<<1; // in bytes
-	for(uint16_t i = 0; i < hdat1; i++){
-		hdat0 = readCommandRegister(HDAT0_REG); // read sample
-		in_packet_buffer[2*i] = (uint8_t)((hdat0>>8) & 0xFF);
-		in_packet_buffer[2*i+1] = (uint8_t)(hdat0  &0xFF);
+	if(DEBUG_MIC)
+	{
+		hdat1 = sizeof(sinebuf)/2; // read number of samples
+	}
+	else
+	{
+		hdat1 = AUDIO_IN_PACKET/2; //readCommandRegister(HDAT1_REG); // bug with reading codec HDAT1 register
+	}
+
+	if(hdat1 > 0)
+	{
+		*size = hdat1<<1; // in bytes
+		for(uint16_t i = 0; i < hdat1; i++){
+			if(DEBUG_MIC)
+			{
+				hdat0 = sinebuf[i]; // read sample
+			}
+			else
+			{
+				hdat0 = readCommandRegister(HDAT0_REG); // read sample
+			}
+
+			in_packet_buffer[2*i+1] = (uint8_t)((hdat0>>8) & 0xFF);
+			in_packet_buffer[2*i] = (uint8_t)(hdat0 & 0xFF);
+		}
+	}
+	else
+	{
+		memset(in_packet_buffer, 0, AUDIO_IN_PACKET);
+		*size = AUDIO_IN_PACKET;
 	}
 	return (USBD_OK);
 }
