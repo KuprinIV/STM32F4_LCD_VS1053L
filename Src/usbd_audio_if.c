@@ -125,7 +125,7 @@ static int8_t AUDIO_VolumeCtl_FS(uint8_t vol);
 static int8_t AUDIO_MuteCtl_FS(uint8_t cmd);
 static int8_t AUDIO_PeriodicTC_FS(uint8_t *pbuf, uint32_t size, uint8_t cmd);
 static int8_t AUDIO_GetState_FS(void);
-static int8_t AUDIO_MicSendData(int16_t* in_buffer, uint16_t* pos, uint16_t* size);
+static int8_t AUDIO_MicSendData(uint8_t* in_packet_buffer, uint16_t* size);
 
 /* USER CODE BEGIN PRIVATE_FUNCTIONS_DECLARATION */
 
@@ -160,7 +160,13 @@ static int8_t AUDIO_Init_FS(uint32_t AudioFreq, uint32_t Volume, uint32_t option
   /* USER CODE BEGIN 0 */
 	UNUSED(options);
 	writeCommandRegister(CLOCKF_REG, 0x9800);
-//	current_volume = 200 - (Volume<<1);
+	// init speaker
+	writeData(WAV_header_48kHz_16bit_stereo, sizeof(WAV_header_48kHz_16bit_stereo));
+	setVolume(current_volume, current_volume);
+
+	// init mic
+//	startRecording(&mic_params);
+//	setMonitoringVolume(0x01); // set monitoring volume -84 dB
   return (USBD_OK);
   /* USER CODE END 0 */
 }
@@ -196,23 +202,16 @@ static int8_t AUDIO_AudioCmd_FS(uint8_t* pbuf, uint32_t size, uint8_t cmd)
   switch(cmd)
   {
     case AUDIO_CMD_START:
-    	// init speaker
-    	writeData(WAV_header_48kHz_16bit_stereo, sizeof(WAV_header_48kHz_16bit_stereo));
-    	setVolume(current_volume, current_volume);
 
-    	// init mic
-		startRecording(&mic_params);
-		setMonitoringVolume(0x01); // set monitoring volume -84 dB
-    break;
+    	break;
 
     case AUDIO_CMD_PLAY:
-    	writeData(pbuf, (uint16_t)size);
-    break;
+
+    	break;
 
     case AUDIO_CMD_STOP:
-//    	writeCommandRegister(MODE_REG, 0x4808);
-    	setVolume(254, 254);
-    break;
+
+    	break;
   }
   return (USBD_OK);
   /* USER CODE END 2 */
@@ -297,21 +296,17 @@ void HalfTransfer_CallBack_FS(void)
 }
 
 /* USER CODE BEGIN PRIVATE_FUNCTIONS_IMPLEMENTATION */
-static int8_t AUDIO_MicSendData(int16_t* in_buffer, uint16_t* pos, uint16_t* size)
+static int8_t AUDIO_MicSendData(uint8_t* in_packet_buffer, uint16_t* size)
 {
 	uint16_t hdat0 = 0, hdat1 = 0;
 
 	// read mic data from codec
 	hdat1 = readCommandRegister(HDAT1_REG); // read number of samples
+	*size = hdat1<<1; // in bytes
 	for(uint16_t i = 0; i < hdat1; i++){
 		hdat0 = readCommandRegister(HDAT0_REG); // read sample
-		in_buffer[(*pos)+i] = hdat0;
-		(*size)++;
-		if(((*pos)+i) >= AUDIO_IN_PACKET)
-		{
-			(*pos) = 0;
-			break;
-		}
+		in_packet_buffer[2*i] = (uint8_t)((hdat0>>8) & 0xFF);
+		in_packet_buffer[2*i+1] = (uint8_t)(hdat0  &0xFF);
 	}
 	return (USBD_OK);
 }

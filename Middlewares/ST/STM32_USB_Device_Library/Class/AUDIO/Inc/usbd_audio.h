@@ -103,6 +103,8 @@ extern "C" {
 #define AUDIO_OUT_TC                                  0x01U
 #define AUDIO_IN_TC                                   0x02U
 
+#define AUDIO_OUT_IF                                  0x01U
+#define AUDIO_IN_IF                                   0x02U
 
 #define AUDIO_OUT_PACKET                              (uint16_t)(((USBD_AUDIO_FREQ * 2U * 2U) / 1000U))
 #define AUDIO_DEFAULT_VOLUME                          70U
@@ -149,15 +151,11 @@ typedef struct
 
 typedef struct
 {
-  uint32_t alt_setting;
-  uint8_t buffer[AUDIO_TOTAL_BUF_SIZE];
-  AUDIO_OffsetTypeDef offset;
-  uint8_t rd_enable;
-  uint16_t rd_ptr;
-  uint16_t wr_ptr;
+  uint32_t alt_settings[USBD_MAX_NUM_INTERFACES + 1];
+  uint8_t out_packet_buffer[AUDIO_OUT_PACKET];
   /* mic data */
-  int16_t in_buffer[AUDIO_IN_PACKET];
-  uint8_t in_buffer_half;
+  uint8_t in_packet_buffer[AUDIO_IN_PACKET];
+  uint8_t in_packet_buffer_enable;
   /* control data */
   USBD_AUDIO_ControlTypeDef control;
 } USBD_AUDIO_HandleTypeDef;
@@ -172,7 +170,7 @@ typedef struct
   int8_t (*MuteCtl)(uint8_t cmd);
   int8_t (*PeriodicTC)(uint8_t *pbuf, uint32_t size, uint8_t cmd);
   int8_t (*GetState)(void);
-  int8_t (*MicSendData)(int16_t* in_buffer, uint16_t* pos, uint16_t* size);
+  int8_t (*MicSendData)(uint8_t* in_packet_buffer, uint16_t* size);
 } USBD_AUDIO_ItfTypeDef;
 /**
   * @}
